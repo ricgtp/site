@@ -151,6 +151,21 @@ html{scroll-snap-type:none}
 .card p{margin-top:10px;color:var(--muted);max-width:62ch}
 .card .link{display:inline-block;margin-top:14px}
 .card:hover h2{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+
+/* menu do celular */
+.menu{display:none;align-items:center;justify-content:center;width:42px;height:42px;padding:0;border:1px solid var(--rule);background:transparent;color:var(--fg);border-radius:2px;cursor:pointer}
+.menu svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.5;fill:none}
+.menu .x{display:none}
+.menu[aria-expanded="true"] .x{display:block}
+.menu[aria-expanded="true"] .tr{display:none}
+.menu:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.mnav{border-top:1px solid var(--rule)}
+.top .mnav .wrap{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;min-height:0;padding-block:6px 14px}
+.mnav a{font-family:var(--display);font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--fg);padding:16px 0;border-bottom:1px solid var(--rule)}
+.mnav a:last-child{border-bottom:0}
+.mnav a[aria-current="page"]{color:var(--muted)}
+@media (max-width:640px){ .menu{display:inline-flex} nav{gap:10px} }
+@media (min-width:641px){ .mnav{display:none!important} }
 </style>
 </head>
 <body>
@@ -173,8 +188,9 @@ html{scroll-snap-type:none}
 <path d="M 662.24 335.66 L 671.02 335.66 C 675.99 335.66 680.05 333.91 683.17 330.41 C 684.61 328.84 685.71 327.02 686.48 324.95 C 687.24 322.87 687.62 320.66 687.62 318.31 C 687.62 316.00 687.24 313.81 686.48 311.73 C 685.71 309.66 684.61 307.84 683.17 306.27 C 680.00 302.86 675.95 301.15 671.02 301.15 L 662.24 301.15 Z M 671.02 338.43 L 659.47 338.43 L 659.47 298.31 L 671.02 298.31 C 673.85 298.31 676.48 298.83 678.91 299.88 C 681.34 300.93 683.44 302.43 685.21 304.36 C 686.90 306.21 688.20 308.33 689.10 310.71 C 690.00 313.10 690.45 315.63 690.45 318.31 C 690.45 320.98 690.00 323.52 689.10 325.90 C 688.20 328.29 686.90 330.43 685.21 332.32 C 683.44 334.30 681.34 335.81 678.91 336.86 C 676.48 337.91 673.85 338.43 671.02 338.43"/>
 <path d="M 767.55 300.71 C 764.38 300.71 761.47 301.51 758.79 303.09 C 756.11 304.68 753.98 306.82 752.39 309.51 C 750.82 312.21 750.02 315.16 750.02 318.37 C 750.02 321.58 750.82 324.54 752.39 327.23 C 753.98 329.93 756.11 332.07 758.79 333.65 C 761.47 335.23 764.38 336.03 767.55 336.03 C 770.72 336.03 773.64 335.23 776.32 333.65 C 778.99 332.07 781.11 329.93 782.68 327.23 C 784.24 324.54 785.03 321.58 785.03 318.37 C 785.03 315.16 784.24 312.21 782.68 309.51 C 781.11 306.82 778.99 304.68 776.32 303.09 C 773.64 301.51 770.72 300.71 767.55 300.71 M 767.55 338.86 C 763.89 338.86 760.49 337.95 757.37 336.12 C 754.24 334.29 751.77 331.80 749.96 328.65 C 748.14 325.50 747.24 322.07 747.24 318.37 C 747.24 314.66 748.14 311.24 749.96 308.09 C 751.77 304.95 754.24 302.45 757.37 300.62 C 760.49 298.79 763.89 297.88 767.55 297.88 C 771.21 297.88 774.61 298.79 777.74 300.62 C 780.87 302.45 783.34 304.95 785.15 308.09 C 786.96 311.24 787.86 314.66 787.86 318.37 C 787.86 322.07 786.96 325.50 785.15 328.65 C 783.34 331.80 780.87 334.29 777.74 336.12 C 774.61 337.95 771.21 338.86 767.55 338.86"/></svg>
     </a>
-    <nav aria-label="Seções"><a class="sec" href="/#escritorio">Quem sou</a><a class="sec" href="/#areas">Áreas de atuação</a><a class="sec" href="/informativos/" aria-current="page">Informativos</a><a class="sec" href="/#contato">Contato</a><a class="cta" href="https://wa.me/5513991617657" target="_blank" rel="noopener">WhatsApp</a></nav>
+    <nav aria-label="Seções"><a class="sec" href="/#escritorio">Quem sou</a><a class="sec" href="/#areas">Áreas de atuação</a><a class="sec" href="/informativos/" aria-current="page">Informativos</a><a class="sec" href="/#contato">Contato</a><a class="cta" href="https://wa.me/5513991617657" target="_blank" rel="noopener">WhatsApp</a><button class="menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mnav"><svg class="tr" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 5h16M2 10h16M2 15h16"/></svg><svg class="x" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16"/></svg></button></nav>
   </div>
+<div class="mnav" id="mnav" hidden><div class="wrap"><a href="/#escritorio">Quem sou</a><a href="/#areas">Áreas de atuação</a><a href="/informativos/" aria-current="page">Informativos</a><a href="/#contato">Contato</a></div></div>
 </header>
 <svg class="wm" viewBox="0 0 653.99 690" aria-hidden="true"><path d="M 332.05 403.02 L 332.55 423.54 L 629.97 423.54 C 595.56 569.13 472.49 670.45 329.33 670.45 C 158.52 670.45 19.55 524.46 19.55 345.00 C 19.55 165.54 158.52 19.55 329.33 19.55 C 450.03 19.55 560.61 94.21 611.07 209.75 L 611.93 211.73 L 633.11 211.73 L 631.21 207.16 C 578.64 81.32 460.15 0.00 329.33 0.00 C 147.75 0.00 0.00 154.77 0.00 345.00 C 0.00 535.23 147.75 690.00 329.33 690.00 C 488.54 690.00 624.80 570.99 653.32 407.01 L 653.99 403.15 Z"/>
 <path d="M 332.55 361.12 L 652.71 361.17 L 653.40 340.76 L 332.05 340.60 Z"/></svg>
@@ -216,5 +232,12 @@ html{scroll-snap-type:none}
 <path d="M 332.55 361.12 L 652.71 361.17 L 653.40 340.76 L 332.05 340.60 Z"/></svg><span class="linha"></span></div>
   </div>
 </footer>
+<script>
+(function(){var b=document.querySelector('.menu'),m=document.getElementById('mnav');if(!b||!m)return;
+function set(o){b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');m.hidden=!o}
+b.addEventListener('click',function(){set(m.hidden)});
+m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});})();
+</script>
 </body>
 </html>
