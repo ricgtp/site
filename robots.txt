@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://godoyadvocacia.adv.br/sitemap.xml
