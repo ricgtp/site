@@ -161,20 +161,16 @@ footer .oab{font-family:var(--display);font-weight:400;font-size:12px;letter-spa
   @keyframes rise{from{opacity:.001;transform:translateY(8px)}to{opacity:1;transform:none}}
 }
 
-/* menu do celular */
-.menu{display:none;align-items:center;justify-content:center;width:42px;height:42px;padding:0;border:1px solid var(--rule);background:transparent;color:var(--fg);border-radius:2px;cursor:pointer}
-.menu svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.5;fill:none}
-.menu .x{display:none}
-.menu[aria-expanded="true"] .x{display:block}
-.menu[aria-expanded="true"] .tr{display:none}
-.menu:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
-.mnav{border-top:1px solid var(--rule)}
-.top .mnav .wrap{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;min-height:0;padding-block:6px 14px}
-.mnav a{font-family:var(--display);font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--fg);padding:16px 0;border-bottom:1px solid var(--rule)}
-.mnav a:last-child{border-bottom:0}
+/* faixa de seções no celular */
+.mnav{display:block;border-top:1px solid var(--rule)}
+.top .mnav .wrap{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:0;min-height:0;padding-block:0;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.top .mnav .wrap::-webkit-scrollbar{display:none}
+.mnav a{font-family:var(--display);font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--fg);padding:13px 0;flex:none;border-bottom:0!important}
+.mnav a+a::before{content:"·";color:var(--muted);margin:0 9px;letter-spacing:0}
 .mnav a[aria-current="page"]{color:var(--muted)}
-@media (max-width:640px){ .menu{display:inline-flex} nav{gap:10px} }
 @media (min-width:641px){ .mnav{display:none!important} }
+@media (max-width:640px){ html{scroll-padding-top:108px} }
+@media (max-width:374px){ .mnav a{font-size:10.5px;letter-spacing:.06em} .mnav a+a::before{margin:0 6px} }
 </style>
 </head>
 <body>
@@ -204,10 +200,9 @@ footer .oab{font-family:var(--display);font-weight:400;font-size:12px;letter-spa
       <a class="sec" href="informativos/">Informativos</a>
       <a class="sec" href="#contato">Contato</a>
       <a class="cta" href="https://wa.me/5513991617657" target="_blank" rel="noopener">WhatsApp</a>
-      <button class="menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mnav"><svg class="tr" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 5h16M2 10h16M2 15h16"/></svg><svg class="x" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16"/></svg></button>
     </nav>
   </div>
-<div class="mnav" id="mnav" hidden><div class="wrap"><a href="#escritorio">Quem sou</a><a href="#areas">Áreas de atuação</a><a href="informativos/">Informativos</a><a href="#contato">Contato</a></div></div>
+<nav class="mnav" id="mnav" aria-label="Seções"><div class="wrap"><a href="#escritorio">Quem sou</a><a href="#areas">Áreas</a><a href="informativos/">Informativos</a><a href="#contato">Contato</a></div></nav>
 </header>
 <svg class="wm" viewBox="0 0 653.99 690" aria-hidden="true"><path d="M 332.05 403.02 L 332.55 423.54 L 629.97 423.54 C 595.56 569.13 472.49 670.45 329.33 670.45 C 158.52 670.45 19.55 524.46 19.55 345.00 C 19.55 165.54 158.52 19.55 329.33 19.55 C 450.03 19.55 560.61 94.21 611.07 209.75 L 611.93 211.73 L 633.11 211.73 L 631.21 207.16 C 578.64 81.32 460.15 0.00 329.33 0.00 C 147.75 0.00 0.00 154.77 0.00 345.00 C 0.00 535.23 147.75 690.00 329.33 690.00 C 488.54 690.00 624.80 570.99 653.32 407.01 L 653.99 403.15 Z"/>
 <path d="M 332.55 361.12 L 652.71 361.17 L 653.40 340.76 L 332.05 340.60 Z"/></svg>
@@ -330,12 +325,5 @@ document.querySelectorAll('.copy').forEach(function(b){
 });
 </script>
 
-<script>
-(function(){var b=document.querySelector('.menu'),m=document.getElementById('mnav');if(!b||!m)return;
-function set(o){b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');m.hidden=!o}
-b.addEventListener('click',function(){set(m.hidden)});
-m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false)})});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});})();
-</script>
 </body>
 </html>
