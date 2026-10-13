@@ -149,6 +149,14 @@ html{scroll-snap-type:none}
 .card p{margin-top:10px;color:var(--muted);max-width:62ch}
 .card .link{display:inline-block;margin-top:14px}
 .card:hover h2{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.card .link{position:relative}
+.card .link::after{content:"\2192";position:absolute;left:100%;top:-1px;margin-left:8px;opacity:0;transform:translateX(-6px);transition:opacity .25s ease,transform .25s ease}
+.card:hover .link::after,.card:focus-visible .link::after{opacity:1;transform:translateX(0)}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+  .card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .card:hover,.card:focus-visible{transform:translateY(-3px);border-bottom-color:var(--rule-strong);box-shadow:0 14px 22px -18px rgba(0,0,0,.35)}
+}
+@media (prefers-reduced-motion:reduce){ .card .link::after{transition:none} }
 
 /* faixa de seções no celular */
 .mnav{display:block;border-top:1px solid var(--rule)}
