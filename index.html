@@ -220,6 +220,20 @@ html[data-hero="b"] .retrato{display:none}
 .bloco p+p{margin-top:0}
 @media (min-width:721px){ #escritorio .grid2>div:first-child{position:sticky;top:96px;align-self:start} }
 
+/* ===== acabamento: titulos alinhados, ultimo cartao em faixa, fim de Quem sou ===== */
+.area h3{line-height:1.25}
+@media (min-width:561px){
+  .area h3{min-height:2.5em}
+  .areas>a.area:last-child{display:flex;grid-column:1/-1;flex-direction:row;align-items:stretch}
+  .areas>.area:last-child .foto{flex:0 0 36%;aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--rule)}
+  .areas>.area:last-child .foto img{min-height:100%}
+  .areas>.area:last-child .corpo{flex:1;align-self:center;padding:32px 36px}
+  .areas>.area:last-child h3{min-height:0}
+  .areas>.area:last-child p{max-width:52ch}
+}
+.principles li:last-child{border-bottom:0}
+@media (min-width:721px){ .principles li:nth-last-child(2){border-bottom:0} }
+
 /* ===== visual: esmaecer ao rolar e WhatsApp fixo no celular ===== */
 .js .rv{opacity:0;transition:opacity .9s ease,transform .9s ease}
 .js .rv.in{opacity:1}
