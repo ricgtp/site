@@ -117,6 +117,16 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 /* menu: secao atual */
 nav a.sec[aria-current="true"]{color:var(--fg);border-bottom-color:var(--fg)}
 .mnav a[aria-current="true"]{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+
+/* Civel sozinho: cartao normal centralizado na ultima linha */
+@media (min-width:861px){
+  .areas>a.area:last-child{grid-column:2;display:flex;flex-direction:column}
+  .areas>a.area:last-child .foto{flex:none;aspect-ratio:16/7;border-right:0;border-bottom:1px solid var(--rule)}
+  .areas>a.area:last-child .foto img{min-height:0;height:100%;max-height:none}
+  .areas>a.area:last-child .corpo{padding:26px 24px 28px;align-self:auto;flex:none}
+  .areas>a.area:last-child h3{min-height:2.5em}
+}
+@media (min-width:561px) and (max-width:860px){ .areas>a.area:last-child{display:flex;grid-column:1/-1;flex-direction:row;align-items:stretch} }
 </style>
 <style>
 /* Layout: a single white sheet, like the letterhead. Hairlines frame the sections; the G sits behind the opening as a watermark; spaced caps in Montserrat are the brand's own device (A D V O G A D O). */
@@ -290,7 +300,6 @@ html[data-hero="b"] .retrato{display:none}
 .area h3{line-height:1.25}
 @media (min-width:561px){
   .area h3{min-height:2.5em}
-  .areas>a.area:last-child{display:flex;grid-column:1/-1;flex-direction:row;align-items:stretch}
   .areas>.area:last-child .foto{flex:0 0 36%;aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--rule)}
   .areas>.area:last-child .foto img{min-height:100%}
   .areas>.area:last-child .corpo{flex:1;align-self:center;padding:32px 36px}
