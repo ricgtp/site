@@ -62,16 +62,18 @@ img{max-width:100%}
   --rule-strong:#1e1e1e;
   --wm:#f3f3f3;
   --btn-hover:#f3f3f3;
+  --card-hover:#ffffff;
+  --card-shadow:0 22px 34px -20px rgba(0,0,0,.45);
   --display:"Montserrat","Helvetica Neue",Arial,sans-serif;
   --body:Verdana,Geneva,"DejaVu Sans",sans-serif;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#161616; --fg:#ececec; --muted:#a5a5a5; --rule:#444444; --rule-strong:#ececec; --wm:#1c1c1c; --btn-hover:#222222; color-scheme:dark;
+    --bg:#161616; --fg:#ececec; --muted:#a5a5a5; --rule:#444444; --rule-strong:#ececec; --wm:#1c1c1c; --btn-hover:#222222; --card-hover:#222222; --card-shadow:0 0 0 1px rgba(255,255,255,.25),0 24px 40px -18px rgba(255,255,255,.22); color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#161616; --fg:#ececec; --muted:#a5a5a5; --rule:#444444; --rule-strong:#ececec; --wm:#1c1c1c; --btn-hover:#222222; color-scheme:dark;
+  --bg:#161616; --fg:#ececec; --muted:#a5a5a5; --rule:#444444; --rule-strong:#ececec; --wm:#1c1c1c; --btn-hover:#222222; --card-hover:#222222; --card-shadow:0 0 0 1px rgba(255,255,255,.25),0 24px 40px -18px rgba(255,255,255,.22); color-scheme:dark;
 }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.65;margin:0;padding-inline:16px;padding-block:0;-webkit-font-smoothing:antialiased}
@@ -137,8 +139,8 @@ a.area h3{border-bottom:1px solid transparent;display:inline-block}
 a.area h3::after{content:"\2192";display:inline-block;margin-left:10px;opacity:0;transform:translateX(-6px);transition:opacity .25s ease,transform .25s ease}
 a.area:hover h3::after,a.area:focus-visible h3::after{opacity:1;transform:translateX(0)}
 @media (hover:hover) and (prefers-reduced-motion:no-preference){
-  a.area{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-  a.area:hover,a.area:focus-visible{transform:translateY(-4px);border-color:var(--rule-strong);box-shadow:0 16px 26px -18px rgba(0,0,0,.4)}
+  a.area{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease,background-color .28s ease}
+  a.area:hover,a.area:focus-visible{position:relative;z-index:2;transform:translateY(-6px) scale(1.02);border-color:var(--rule-strong);background:var(--card-hover);box-shadow:var(--card-shadow)}
 }
 @media (prefers-reduced-motion:reduce){ a.area h3::after{transition:none} }
 
