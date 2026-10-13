@@ -160,6 +160,10 @@ html{scroll-snap-type:none}
 @media (max-width:640px){ html{scroll-padding-top:108px} }
 @media (max-width:374px){ .mnav a{font-size:10.5px;letter-spacing:.06em} .mnav a+a::before{margin:0 6px} }
 footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+/* texto longo justificado no computador, com hifenizacao em portugues */
+@media (min-width:721px){
+  .art p:not(.lead):not(.assina):not(.fonte):not(.meta),.art li{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-justify:inter-word}
+}
 </style>
 </head>
 <body>

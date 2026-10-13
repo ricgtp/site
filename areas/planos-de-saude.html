@@ -168,6 +168,10 @@ html{scroll-snap-type:none}
 @media (max-width:640px){ html{scroll-padding-top:108px} }
 @media (max-width:374px){ .mnav a{font-size:10.5px;letter-spacing:.06em} .mnav a+a::before{margin:0 6px} }
 footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+/* texto longo justificado no computador, com hifenizacao em portugues */
+@media (min-width:721px){
+  .art p:not(.lead):not(.assina):not(.fonte):not(.meta),.art li{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-justify:inter-word}
+}
 </style>
 <style>.faixa{display:block;width:100%;height:auto;aspect-ratio:4.5/1;object-fit:cover;object-position:50% 36%;filter:grayscale(1);margin:0 0 34px}</style>
 </head>
