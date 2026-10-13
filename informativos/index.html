@@ -29,16 +29,18 @@
   --rule-strong:#1e1e1e;
   --wm:#f3f3f3;
   --btn-hover:#f3f3f3;
+  --card-hover:#ffffff;
+  --card-shadow:0 22px 34px -20px rgba(0,0,0,.45);
   --display:"Montserrat","Helvetica Neue",Arial,sans-serif;
   --body:Verdana,Geneva,"DejaVu Sans",sans-serif;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#161616; --fg:#ececec; --muted:#a5a5a5; --rule:#444444; --rule-strong:#ececec; --wm:#1c1c1c; --btn-hover:#222222; color-scheme:dark;
+    --bg:#161616; --fg:#ececec; --muted:#a5a5a5; --rule:#444444; --rule-strong:#ececec; --wm:#1c1c1c; --btn-hover:#222222; --card-hover:#222222; --card-shadow:0 0 0 1px rgba(255,255,255,.25),0 24px 40px -18px rgba(255,255,255,.22); color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#161616; --fg:#ececec; --muted:#a5a5a5; --rule:#444444; --rule-strong:#ececec; --wm:#1c1c1c; --btn-hover:#222222; color-scheme:dark;
+  --bg:#161616; --fg:#ececec; --muted:#a5a5a5; --rule:#444444; --rule-strong:#ececec; --wm:#1c1c1c; --btn-hover:#222222; --card-hover:#222222; --card-shadow:0 0 0 1px rgba(255,255,255,.25),0 24px 40px -18px rgba(255,255,255,.22); color-scheme:dark;
 }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.65;margin:0;padding-inline:16px;padding-block:0;-webkit-font-smoothing:antialiased}
@@ -143,18 +145,17 @@ html{scroll-snap-type:none}
 .fonte b{font-family:var(--display);font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg);margin-right:8px}
 .assina{margin-top:14px;font-size:13.5px;color:var(--muted)}
 .back{display:inline-block;margin-top:40px}
-.lista{margin-top:34px;border-top:1px solid var(--rule-strong)}
-.card{display:block;text-decoration:none;color:inherit;padding:26px 0;border-bottom:1px solid var(--rule)}
+.lista{margin-top:34px;display:grid;gap:24px}
+.card{display:block;text-decoration:none;color:inherit;padding:26px 28px 28px;border:1px solid var(--rule);border-radius:6px}
 .card h2{font-size:clamp(21px,2.6vw,25px);font-weight:400;margin-top:10px}
 .card p{margin-top:10px;color:var(--muted);max-width:62ch}
 .card .link{display:inline-block;margin-top:14px}
-.card:hover h2{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
 .card .link{position:relative}
 .card .link::after{content:"\2192";position:absolute;left:100%;top:-1px;margin-left:8px;opacity:0;transform:translateX(-6px);transition:opacity .25s ease,transform .25s ease}
 .card:hover .link::after,.card:focus-visible .link::after{opacity:1;transform:translateX(0)}
 @media (hover:hover){
-  .card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-  .card:hover,.card:focus-visible{transform:translateY(-3px);border-bottom-color:var(--rule-strong);box-shadow:0 14px 22px -18px rgba(0,0,0,.35)}
+  .card{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease,background-color .28s ease}
+  .card:hover,.card:focus-visible{position:relative;z-index:2;transform:translateY(-6px) scale(1.015);border-color:var(--rule-strong);background:var(--card-hover);box-shadow:var(--card-shadow)}
 }
 @media (prefers-reduced-motion:reduce){ .card .link::after{transition:none} }
 
