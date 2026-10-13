@@ -145,26 +145,22 @@ a.area:hover h3::after,a.area:focus-visible h3::after{opacity:1;transform:transl
 
 /* avaliações */
 #avaliacoes .lead{max-width:62ch}
-.aval{position:relative;margin-top:36px}
-.aval-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;padding:2px 2px 6px;margin:0 -2px}
-.aval-track::-webkit-scrollbar{display:none}
-.rev{flex:0 0 calc((100% - 48px)/3);scroll-snap-align:start;border:1px solid var(--rule);border-radius:2px;padding:24px 24px 26px;margin:0;display:flex;flex-direction:column;min-width:0;background:transparent;transition:border-color .25s ease}
+.aval{margin-top:36px}
+.aval-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}
+.rev{border:1px solid var(--rule);border-radius:2px;padding:24px 24px 26px;margin:0;display:flex;flex-direction:column;min-width:0;transition:border-color .25s ease,opacity .35s ease}
+.rev[hidden]{display:none}
 .rev:hover{border-color:var(--rule-strong)}
 .rev header{display:flex;align-items:center;gap:14px;margin-bottom:14px}
 .rev .ini{flex:0 0 auto;width:40px;height:40px;border:1px solid var(--rule-strong);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:500;font-size:12px;letter-spacing:.08em}
 .rev .quando{font-family:var(--display);font-size:12px;letter-spacing:.08em;color:var(--muted);line-height:1.4}
 .rev .est{letter-spacing:.2em;font-size:13px;margin-bottom:12px;color:var(--fg)}
 .rev blockquote{margin:0;font-size:14.5px;line-height:1.6;color:var(--fg)}
-.aval-nav{display:flex;align-items:center;gap:10px;margin-top:22px}
-.aval-nav button{font-family:var(--display);font-size:16px;line-height:1;width:40px;height:40px;border:1px solid var(--fg);border-radius:2px;background:transparent;color:var(--fg);cursor:pointer;transition:background .2s ease,color .2s ease,opacity .2s ease}
-.aval-nav button:hover:not(:disabled){background:var(--fg);color:var(--bg)}
-.aval-nav button:disabled{opacity:.3;cursor:default}
-.aval-nav button:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.aval-nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:24px}
+.aval-nav .btn{cursor:pointer;background:transparent}
 .aval-nav .link{margin-left:auto}
 .aval-nota{margin-top:18px;max-width:70ch;font-size:13px;color:var(--muted)}
-@media (max-width:860px){ .rev{flex-basis:calc((100% - 24px)/2)} }
-@media (max-width:560px){ .rev{flex-basis:88%} .aval-nav .link{margin-left:0} .aval-nav{flex-wrap:wrap} }
-@media (prefers-reduced-motion:reduce){ .aval-track{scroll-behavior:auto} }
+@media (max-width:720px){ .aval-grid{grid-template-columns:1fr} .aval-nav .link{margin-left:0} }
+@media (prefers-reduced-motion:reduce){ .rev{transition:none} }
 @media (max-width:860px){ .areas{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (max-width:560px){ .areas{grid-template-columns:1fr} }
 
@@ -307,17 +303,18 @@ footer .oab{font-family:var(--display);font-weight:400;font-size:12px;letter-spa
       <h2>Quem já foi atendido.</h2>
       <p class="lead">Avaliações públicas publicadas por clientes no Perfil do escritório no Google, reproduzidas na íntegra e com o nome abreviado.</p>
       <div class="aval">
-        <div class="aval-track" id="avalTrack" tabindex="0" role="region" aria-label="Avaliações de clientes no Google">
-        <figure class="rev"><header><span class="ini" aria-hidden="true">R. N.</span><span class="quando">jun. de 2026</span></header><div class="est" role="img" aria-label="5 estrelas">★★★★★</div><blockquote><p>Atendimento impecável, muito atencioso, rápido e com um vasto conhecimento na área. Transmite segurança e responsabilidade em uma profissão em que esses atributos são fundamentais. Indico de olhos fechados pois sei do compromisso e competência.</p></blockquote></figure>
-        <figure class="rev"><header><span class="ini" aria-hidden="true">M. L.</span><span class="quando">mai. de 2026</span></header><div class="est" role="img" aria-label="5 estrelas">★★★★★</div><blockquote><p>Toda a equipe do escritório está de parabéns pela excelente recepção, demonstrando simpatia e atenção. O advogado Ricardo destacou-se pela clareza e objetividade em suas explicações, tornando-as de fácil compreensão, sendo também solícito e atencioso, o que tornou o atendimento ainda mais satisfatório.</p></blockquote></figure>
-        <figure class="rev"><header><span class="ini" aria-hidden="true">R. G.</span><span class="quando">jun. de 2025</span></header><div class="est" role="img" aria-label="5 estrelas">★★★★★</div><blockquote><p>Um advogado extremamente organizado, profissional e ao mesmo tempo humano, abraça a causa como se sua fosse. Sempre dá explicações sobre o andamento do processo, sempre à disposição para nos atender, super ágil, assim que sai o despacho, já protocola a petição. Profissional educado, honesto e dedicado.</p></blockquote></figure>
-        <figure class="rev"><header><span class="ini" aria-hidden="true">D. A.</span><span class="quando">mai. de 2023</span></header><div class="est" role="img" aria-label="5 estrelas">★★★★★</div><blockquote><p>Sou cliente do Dr Ricardo e só tenho elogios a esta pessoa tão atenciosa e tão responsável com tudo que estou precisando dele na parte jurídica. Ele se mostra muito capaz na sua área de atuação, não tem preguiça de explicar mais de uma vez a dúvida q surge nas nossas conversas. Só tenho muito a agradecer pela capacidade de atuar tão rápido com meu caso. Se tivesse mais de 5 estrelas eu daria.</p></blockquote></figure>
-        <figure class="rev"><header><span class="ini" aria-hidden="true">J. V.</span><span class="quando">nov. de 2022</span></header><div class="est" role="img" aria-label="5 estrelas">★★★★★</div><blockquote><p>O Dr. Ricardo Godoy é um excelente profissional, muito dedicado e muito atencioso, indico de olhos fechados. Antes de um grande profissional, é uma grande pessoa, do bem, um ser humano com um coração incrível. Muito obrigado e gratidão.</p></blockquote></figure>
-        <figure class="rev"><header><span class="ini" aria-hidden="true">E. A.</span><span class="quando">jun. de 2022</span></header><div class="est" role="img" aria-label="5 estrelas">★★★★★</div><blockquote><p>Foi uma experiência incrível, Dr. Ricardo Godoy um profissional empenhado, dedicado e muito atencioso, super indico, bom seria ter mais profissionais assim. Muito obrigado gratidão.</p></blockquote></figure>
+        <div class="aval-grid" id="avalGrid" aria-live="polite">
+          <figure class="rev"><header><span class="ini" aria-hidden="true">R. N.</span><span class="quando">jun. de 2026</span></header><div class="est" role="img" aria-label="5 estrelas">★★★★★</div><blockquote><p>Atendimento impecável, muito atencioso, rápido e com um vasto conhecimento na área. Transmite segurança e responsabilidade em uma profissão em que esses atributos são fundamentais. Indico de olhos fechados pois sei do compromisso e competência.</p></blockquote></figure>
+          <figure class="rev"><header><span class="ini" aria-hidden="true">M. L.</span><span class="quando">mai. de 2026</span></header><div class="est" role="img" aria-label="5 estrelas">★★★★★</div><blockquote><p>Toda a equipe do escritório está de parabéns pela excelente recepção, demonstrando simpatia e atenção. O advogado Ricardo destacou-se pela clareza e objetividade em suas explicações, tornando-as de fácil compreensão, sendo também solícito e atencioso, o que tornou o atendimento ainda mais satisfatório.</p></blockquote></figure>
+          <figure class="rev"><header><span class="ini" aria-hidden="true">R. G.</span><span class="quando">jun. de 2025</span></header><div class="est" role="img" aria-label="5 estrelas">★★★★★</div><blockquote><p>Um advogado extremamente organizado, profissional e ao mesmo tempo humano, abraça a causa como se sua fosse. Sempre dá explicações sobre o andamento do processo, sempre à disposição para nos atender, super ágil, assim que sai o despacho, já protocola a petição. Profissional educado, honesto e dedicado.</p></blockquote></figure>
+          <figure class="rev"><header><span class="ini" aria-hidden="true">D. A.</span><span class="quando">mai. de 2023</span></header><div class="est" role="img" aria-label="5 estrelas">★★★★★</div><blockquote><p>Sou cliente do Dr Ricardo e só tenho elogios a esta pessoa tão atenciosa e tão responsável com tudo que estou precisando dele na parte jurídica. Ele se mostra muito capaz na sua área de atuação, não tem preguiça de explicar mais de uma vez a dúvida q surge nas nossas conversas. Só tenho muito a agradecer pela capacidade de atuar tão rápido com meu caso. Se tivesse mais de 5 estrelas eu daria.</p></blockquote></figure>
+          <figure class="rev" hidden><header><span class="ini" aria-hidden="true">J. V.</span><span class="quando">nov. de 2022</span></header><div class="est" role="img" aria-label="5 estrelas">★★★★★</div><blockquote><p>O Dr. Ricardo Godoy é um excelente profissional, muito dedicado e muito atencioso, indico de olhos fechados. Antes de um grande profissional, é uma grande pessoa, do bem, um ser humano com um coração incrível. Muito obrigado e gratidão.</p></blockquote></figure>
+          <figure class="rev" hidden><header><span class="ini" aria-hidden="true">E. A.</span><span class="quando">jun. de 2022</span></header><div class="est" role="img" aria-label="5 estrelas">★★★★★</div><blockquote><p>Foi uma experiência incrível, Dr. Ricardo Godoy um profissional empenhado, dedicado e muito atencioso, super indico, bom seria ter mais profissionais assim. Muito obrigado gratidão.</p></blockquote></figure>
+          <figure class="rev" hidden><header><span class="ini" aria-hidden="true">I. F.</span><span class="quando">jun. de 2025</span></header><div class="est" role="img" aria-label="5 estrelas">★★★★★</div><blockquote><p>Excelente profissional<br>Altamente competente e completamente interessado na solução dos meus problemas<br>Confio 100% na sua conduta<br>Dá para dormir tranquilo</p></blockquote></figure>
+          <figure class="rev" hidden><header><span class="ini" aria-hidden="true">B. F.</span><span class="quando">mai. de 2022</span></header><div class="est" role="img" aria-label="5 estrelas">★★★★★</div><blockquote><p>Excelente ser humano, chamei o Dr. Ricardo pelo WhatsApp num momento de desespero com zero expectativa de ser atendido, porém fui surpreendido por um ser humano espetacular que me deu todo apoio e suporte, todas as bênçãos na sua vida e família, Dr. RICARDO!</p></blockquote></figure>
         </div>
         <div class="aval-nav">
-          <button type="button" id="avalPrev" aria-label="Avaliações anteriores">&larr;</button>
-          <button type="button" id="avalNext" aria-label="Próximas avaliações">&rarr;</button>
+          <button type="button" class="btn" id="avalMais" hidden>Ver outras avaliações</button>
           <a class="link" href="https://www.google.com/maps?cid=15117534470400798219" target="_blank" rel="noopener">Ver todas no Google</a>
         </div>
         <p class="aval-nota">As avaliações tratam do atendimento e não indicam resultado de processo, que depende de cada caso.</p>
@@ -385,13 +382,20 @@ document.querySelectorAll('.copy').forEach(function(b){
   });
 });
 (function(){
-  var t=document.getElementById('avalTrack'),p=document.getElementById('avalPrev'),n=document.getElementById('avalNext');
-  if(!t||!p||!n) return;
-  function upd(){ p.disabled=t.scrollLeft<=2; n.disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-2; }
-  p.addEventListener('click',function(){ t.scrollBy({left:-t.clientWidth,behavior:'smooth'}); });
-  n.addEventListener('click',function(){ t.scrollBy({left:t.clientWidth,behavior:'smooth'}); });
-  t.addEventListener('scroll',function(){ window.requestAnimationFrame(upd); },{passive:true});
-  window.addEventListener('resize',upd); upd();
+  var g=document.getElementById('avalGrid'),b=document.getElementById('avalMais');
+  if(!g||!b) return;
+  var cards=[].slice.call(g.children),N=4;
+  if(cards.length<=N) return;
+  for(var i=cards.length-1;i>0;i--){var k=Math.floor(Math.random()*(i+1));var x=cards[i];cards[i]=cards[k];cards[k]=x;}
+  var pos=0;
+  function show(){
+    var vis=[];for(var i=0;i<N;i++){vis.push(cards[(pos+i)%cards.length]);}
+    cards.forEach(function(c){c.hidden=vis.indexOf(c)<0;});
+    vis.forEach(function(c){g.appendChild(c);});
+    pos=(pos+N)%cards.length;
+  }
+  b.hidden=false; show();
+  b.addEventListener('click',show);
 })();
 </script>
 
