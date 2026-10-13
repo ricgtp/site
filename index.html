@@ -106,10 +106,17 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 @media (min-width:721px){
   .bloco p,#escritorio .grid2>div:last-child>p{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-justify:inter-word}
 }
-/* descricao dos cartoes de area justificada no computador */
-@media (min-width:721px){
-  .area .corpo p{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-justify:inter-word}
-}
+/* fotos um pouco mais escuras no modo escuro */
+.faixa,.area .foto img,.retrato img{filter:grayscale(1) brightness(var(--img-dim,1))}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){--img-dim:.86} }
+:root[data-theme="dark"]{--img-dim:.86}
+/* principios: maiores e numerados */
+.principles{counter-reset:p}
+.principles li{counter-increment:p;padding:22px 0;font-size:17px;line-height:1.5}
+.principles li::before{content:counter(p,decimal-leading-zero);display:block;font-family:var(--display);font-weight:300;font-size:12px;letter-spacing:.24em;color:var(--muted);margin-bottom:8px}
+/* menu: secao atual */
+nav a.sec[aria-current="true"]{color:var(--fg);border-bottom-color:var(--fg)}
+.mnav a[aria-current="true"]{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
 </style>
 <style>
 /* Layout: a single white sheet, like the letterhead. Hairlines frame the sections; the G sits behind the opening as a watermark; spaced caps in Montserrat are the brand's own device (A D V O G A D O). */
@@ -534,5 +541,15 @@ document.querySelectorAll('.copy').forEach(function(b){
 })();
 </script>
 
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  var ids=['escritorio','areas','contato'], links=document.querySelectorAll('nav a[href^="#"]');
+  function mark(id){links.forEach(function(a){ if(a.getAttribute('href')==='#'+id) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); });}
+  var cur=null;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){cur=e.target.id; mark(cur);} else if(cur===e.target.id){cur=null; mark('');} });},{rootMargin:'-35% 0px -60% 0px'});
+  ids.forEach(function(i){var el=document.getElementById(i); if(el) io.observe(el);});
+})();
+</script>
 </body>
 </html>
