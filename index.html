@@ -289,13 +289,13 @@ html[data-hero="b"] .retrato{display:none}
 /* ===== acabamento: titulos alinhados, ultimo cartao em faixa, fim de Quem sou ===== */
 .area h3{line-height:1.25}
 @media (min-width:561px){
-  .areas{grid-template-columns:1fr;gap:16px}
+  .areas{grid-template-columns:1fr;gap:14px}
   a.area{display:flex;flex-direction:row;align-items:stretch}
-  .areas .area .foto{display:block;position:relative;flex:0 0 clamp(220px,26%,300px);height:150px;aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--rule)}
+  .areas .area .foto{display:block;position:relative;flex:0 0 clamp(180px,22%,240px);min-height:118px;aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--rule)}
   .areas .area .foto img{position:absolute;inset:0;width:100%;height:100%;object-position:50% 55%}
-  .areas .area .corpo{flex:1;align-self:center;padding:20px 36px}
-  .area h3{min-height:0;margin-bottom:8px}
-  .areas .area p{max-width:60ch}
+  .areas .area .corpo{flex:1;align-self:center;padding:14px 32px}
+  .area h3{min-height:0;margin-bottom:4px}
+  .areas .area p{max-width:78ch;line-height:1.5}
 }
 .principles li:last-child{border-bottom:0}
 @media (min-width:721px){ .principles li:nth-last-child(2){border-bottom:0} }
