@@ -551,5 +551,18 @@ document.querySelectorAll('.copy').forEach(function(b){
   ids.forEach(function(i){var el=document.getElementById(i); if(el) io.observe(el);});
 })();
 </script>
+<script>
+/* Chegando de outra pagina com #secao: garante que a rolagem va ate a secao e fique la, mesmo com imagens e fontes carregando depois. */
+(function(){
+  var h=location.hash; if(!h||h.length<2) return;
+  var el=document.getElementById(decodeURIComponent(h.slice(1))); if(!el) return;
+  var moved=false;
+  function go(){ if(!moved) el.scrollIntoView({block:'start'}); }
+  ['wheel','touchstart','keydown','mousedown'].forEach(function(ev){addEventListener(ev,function(){moved=true},{once:true,passive:true})});
+  go();
+  addEventListener('load',function(){ go(); setTimeout(go,300); setTimeout(go,1200); });
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(go);
+})();
+</script>
 </body>
 </html>
