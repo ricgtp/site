@@ -172,7 +172,7 @@ html{scroll-snap-type:none}
 .top .mnav .wrap::-webkit-scrollbar{display:none}
 .mnav a{font-family:var(--display);font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--fg);padding:13px 0;flex:none;border-bottom:0!important}
 .mnav a+a::before{content:"·";display:inline-block;text-decoration:none;color:var(--muted);margin:0 9px;letter-spacing:0}
-.mnav a[aria-current="page"]{color:var(--muted)}
+.mnav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
 @media (min-width:641px){ .mnav{display:none!important} }
 @media (max-width:640px){ html{scroll-padding-top:108px} }
 @media (max-width:374px){ .mnav a{font-size:10.5px;letter-spacing:.06em} .mnav a+a::before{margin:0 6px} }
