@@ -289,16 +289,13 @@ html[data-hero="b"] .retrato{display:none}
 /* ===== acabamento: titulos alinhados, ultimo cartao em faixa, fim de Quem sou ===== */
 .area h3{line-height:1.25}
 @media (min-width:561px){
-  .areas{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .areas{grid-template-columns:1fr;gap:16px}
   a.area{display:flex;flex-direction:row;align-items:stretch}
-  .areas .area .foto{display:block;position:relative;flex:0 0 32%;aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--rule)}
-  .areas .area .foto img{position:absolute;inset:0;width:100%;height:100%}
-  .areas .area .corpo{flex:1;align-self:center;padding:22px 24px}
+  .areas .area .foto{display:block;position:relative;flex:0 0 clamp(220px,26%,300px);height:150px;aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--rule)}
+  .areas .area .foto img{position:absolute;inset:0;width:100%;height:100%;object-position:50% 55%}
+  .areas .area .corpo{flex:1;align-self:center;padding:20px 36px}
   .area h3{min-height:0;margin-bottom:8px}
-  .areas>a.area:last-child{grid-column:1/-1}
-  .areas>a.area:last-child .foto{flex-basis:clamp(220px,26%,300px)}
-  .areas>a.area:last-child .corpo{padding:22px 36px}
-  .areas>a.area:last-child p{max-width:52ch}
+  .areas .area p{max-width:60ch}
 }
 .principles li:last-child{border-bottom:0}
 @media (min-width:721px){ .principles li:nth-last-child(2){border-bottom:0} }
