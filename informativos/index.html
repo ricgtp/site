@@ -157,6 +157,13 @@ html{scroll-snap-type:none}
 .card h2{font-size:clamp(21px,2.6vw,25px);font-weight:400;margin-top:10px}
 .card p{margin-top:10px;color:var(--muted);max-width:62ch}
 .card .link{display:inline-block;margin-top:14px}
+.subt{font-family:var(--display);font-weight:300;font-size:clamp(24px,3vw,30px);margin:0 0 6px}
+.subl{color:var(--muted);max-width:62ch;margin:0 0 24px}
+.bloco-adv{margin-top:64px;padding-top:40px;border-top:1px solid var(--rule)}
+.saltos{margin:22px 0 0;display:flex;gap:22px;flex-wrap:wrap;font-family:var(--display);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.saltos a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule-strong);padding-bottom:4px}
+.saltos a:hover{color:var(--fg);border-bottom-color:var(--fg)}
+#para-voce,#para-advogados{scroll-margin-top:84px}
 .card .link{position:relative}
 .card .link::after{content:"\2192";position:absolute;left:100%;top:-1px;margin-left:8px;opacity:0;transform:translateX(-6px);transition:opacity .25s ease,transform .25s ease}
 .card:hover .link::after,.card:focus-visible .link::after{opacity:1;transform:translateX(0)}
@@ -213,7 +220,10 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 <div class="page"><div class="wrap">
 <p class="eyebrow">Informativos</p>
 <h1>Direito em linguagem simples.</h1>
-<p class="lead">Textos curtos sobre os temas que publico no Instagram e no Perfil no Google.</p>
+<p class="lead">Textos curtos sobre os temas que publico no Instagram e no Perfil no Google, e decisões dos tribunais que servem à advocacia.</p>
+<p class="saltos"><a href="#para-voce">Para você</a><a href="#para-advogados">Para advogados</a></p>
+<h2 class="subt" id="para-voce">Para você</h2>
+<p class="subl">Seus direitos, em linguagem simples.</p>
 <div class="lista">
 <a class="card" href="/informativos/viagem-atrasada.html">
 <p class="meta" style="margin:0">13 de outubro de 2026 <span class="tp">∴</span> Consumidor</p>
@@ -227,6 +237,36 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 <p>Produto errado, entrega atrasada ou arrependimento: o que fazer quando a compra pela internet não sai como o combinado.</p>
 <span class="link">Ler</span>
 </a>
+</div>
+<div class="bloco-adv">
+<h2 class="subt" id="para-advogados">Para advogados</h2>
+<p class="subl">Decisões recentes do STJ nas áreas em que atuo, com o que mudou e como usar na prática.</p>
+<div class="lista">
+<a class="card" href="/informativos/honorarios-sem-adiantar-custas.html">
+<p class="meta" style="margin:0">14 de outubro de 2026 <span class="tp">∴</span> Honorários e execução</p>
+<h2>Cobrando honorários? O STJ disse que você não precisa adiantar custas.</h2>
+<p>Duas decisões da Terceira Turma, de setembro de 2026, aplicam o art. 82, § 3º, do CPC: o advogado que cobra os próprios honorários não adianta custas, nem as da pesquisa patrimonial, nem o preparo do recurso.</p>
+<span class="link">Ler</span>
+</a>
+<a class="card" href="/informativos/penhora-segunda-e-salario.html">
+<p class="meta" style="margin:0">14 de outubro de 2026 <span class="tp">∴</span> Penhora e execução</p>
+<h2>Penhora: o que muda na segunda penhora e na penhora de salário.</h2>
+<p>A segunda penhora exige contraditório prévio e avaliação do bem já penhorado, e a penhora de salário para dívida não alimentar ganhou critérios no Tema 1.230.</p>
+<span class="link">Ler</span>
+</a>
+<a class="card" href="/informativos/multa-cominatoria-intimacao-pessoal.html">
+<p class="meta" style="margin:0">14 de outubro de 2026 <span class="tp">∴</span> Cumprimento de sentença</p>
+<h2>Multa por não fazer: sem intimação pessoal do devedor, ela não corre.</h2>
+<p>Em recurso repetitivo, a Corte Especial confirmou que a Súmula 410 continua valendo: a multa por descumprimento de obrigação de fazer ou não fazer exige intimação pessoal do devedor.</p>
+<span class="link">Ler</span>
+</a>
+<a class="card" href="/informativos/planos-de-saude-tea-dano-moral.html">
+<p class="meta" style="margin:0">14 de outubro de 2026 <span class="tp">∴</span> Planos de saúde</p>
+<h2>Plano de saúde e autismo: sessões ilimitadas, mas dano moral não é automático.</h2>
+<p>A Segunda Seção fixou duas teses no mesmo dia: o limite de sessões de terapia para pacientes com TEA é abusivo, mas a recusa indevida não gera, por si só, dano moral presumido.</p>
+<span class="link">Ler</span>
+</a>
+</div>
 </div>
 </div></div>
 </main>
