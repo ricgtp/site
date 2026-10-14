@@ -318,7 +318,7 @@ html[data-hero="b"] .retrato{display:none}
 .top .mnav .wrap{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:0;min-height:0;padding-block:0;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .top .mnav .wrap::-webkit-scrollbar{display:none}
 .mnav a{font-family:var(--display);font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--fg);padding:13px 0;flex:none;border-bottom:0!important}
-.mnav a+a::before{content:"·";color:var(--muted);margin:0 9px;letter-spacing:0}
+.mnav a+a::before{content:"·";display:inline-block;text-decoration:none;color:var(--muted);margin:0 9px;letter-spacing:0}
 .mnav a[aria-current="page"]{color:var(--muted)}
 @media (min-width:641px){ .mnav{display:none!important} }
 @media (max-width:640px){ html{scroll-padding-top:108px} }
