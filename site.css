@@ -225,8 +225,8 @@ html:where(.t-areas,.t-contato,.t-home,.t-quem)[data-hero="b"] .retrato{display:
 :where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .js .rv{opacity:0;transition:opacity .9s ease,transform .9s ease}
 :where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .js .rv.in{opacity:1}
 @media (prefers-reduced-motion:no-preference){:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .js .rv{transform:translateY(14px)}:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .js .rv.in{transform:none} }
-:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .wa-fixo{display:none}
-@media (max-width:720px){:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .wa-fixo{display:flex;position:fixed;right:16px;bottom:max(16px,env(safe-area-inset-bottom));width:54px;height:54px;border-radius:50%;background:#24493c;color:#fff;align-items:center;justify-content:center;box-shadow:0 10px 22px -10px rgba(0,0,0,.55);z-index:60}:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .wa-fixo svg{width:24px;height:24px;fill:currentColor}
+:where(html.t-area,html.t-areas,html.t-contato,html.t-home,html.t-informativo,html.t-informativos,html.t-quem) .wa-fixo{display:none}
+@media (max-width:720px){:where(html.t-area,html.t-areas,html.t-contato,html.t-home,html.t-informativo,html.t-informativos,html.t-quem) .wa-fixo{display:flex;position:fixed;right:16px;bottom:max(16px,env(safe-area-inset-bottom));width:54px;height:54px;border-radius:50%;background:#24493c;color:#fff;align-items:center;justify-content:center;box-shadow:0 10px 22px -10px rgba(0,0,0,.55);z-index:60}:where(html.t-area,html.t-areas,html.t-contato,html.t-home,html.t-informativo,html.t-informativos,html.t-quem) .wa-fixo svg{width:24px;height:24px;fill:currentColor}
 }
 :where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .hero,:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) section{min-height:0;display:block}
 html:where(.t-area,.t-erro,.t-informativo,.t-informativos,.t-privacidade){scroll-snap-type:none}
@@ -277,8 +277,8 @@ html:where(.t-area,.t-erro,.t-informativo,.t-informativos,.t-privacidade){scroll
 :where(html.t-areas) .eyebrow{color:var(--accent)}
 :where(html.t-areas) a.area h2::after{color:var(--accent)}
 @media (hover:hover){html:where(.t-areas) a.area:hover,html:where(.t-areas) a.area:focus-visible{border-color:var(--accent)}html:where(.t-areas) a.area:hover h3,html:where(.t-areas) a.area:focus-visible h3{color:var(--accent)} }
-@media (max-width:720px) and (prefers-color-scheme:dark){:root:where(.t-areas,.t-contato,.t-home,.t-quem):not([data-theme="light"]) .wa-fixo{background:#2f6552} }
-@media (max-width:720px){:root:where(.t-areas,.t-contato,.t-home,.t-quem)[data-theme="dark"] .wa-fixo{background:#2f6552} }
+@media (max-width:720px) and (prefers-color-scheme:dark){:root:where(.t-area,.t-areas,.t-contato,.t-home,.t-informativo,.t-informativos,.t-quem):not([data-theme="light"]) .wa-fixo{background:#2f6552} }
+@media (max-width:720px){:root:where(.t-area,.t-areas,.t-contato,.t-home,.t-informativo,.t-informativos,.t-quem)[data-theme="dark"] .wa-fixo{background:#2f6552} }
 :where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 @media (min-width:721px){:where(html.t-area,html.t-informativo,html.t-informativos,html.t-privacidade) .art p:not(.lead):not(.assina):not(.fonte):not(.meta),:where(html.t-area,html.t-informativo,html.t-informativos,html.t-privacidade) .art li{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-justify:inter-word}
 }
@@ -358,6 +358,6 @@ footer{font-size:13.5px}
 .topo.on{opacity:1;visibility:visible;transform:none;transition:opacity .25s ease,transform .25s ease}
 .topo:hover{border-color:var(--fg)}.topo:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
 .topo svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-@media (max-width:720px){ .topo{right:16px} :where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .topo{bottom:calc(max(16px,env(safe-area-inset-bottom)) + 68px)} }
+@media (max-width:720px){ .topo{right:16px} :where(html.t-area,html.t-areas,html.t-contato,html.t-home,html.t-informativo,html.t-informativos,html.t-quem) .topo{bottom:calc(max(16px,env(safe-area-inset-bottom)) + 68px)} }
 @media (prefers-reduced-motion:reduce){ .topo{transition:none} }
 @media print{ .topo{display:none} }
