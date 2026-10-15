@@ -355,7 +355,7 @@ nav .sub{position:relative;display:flex;align-items:center}
 nav .sub-panel{position:absolute;left:50%;top:100%;transform:translateX(-50%);padding-top:14px;display:none;z-index:6}
 nav .sub-panel .box{min-width:250px;background:var(--bg);border:1px solid var(--rule);border-radius:2px;padding:6px 0;box-shadow:0 10px 30px rgba(0,0,0,.08)}
 nav .sub-panel a{display:block;padding:11px 22px;font-size:13px;letter-spacing:.1em;white-space:nowrap;color:var(--muted);border-bottom:0}
-nav .sub-panel a:hover,nav .sub-panel a:focus-visible{color:var(--fg);background:var(--rule)}
+nav .sub-panel a:hover,nav .sub-panel a:focus-visible{color:var(--fg);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:5px;text-decoration-thickness:1.5px}
 nav .sub-panel a[aria-current="page"]{color:var(--fg);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
 nav .sub:hover .sub-panel,nav .sub:focus-within .sub-panel{display:block}
 @media (hover:none){ nav .sub:hover .sub-panel{display:none} nav .sub:focus-within .sub-panel{display:block} }
