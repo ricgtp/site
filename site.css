@@ -83,7 +83,7 @@ nav a.sec:hover,nav a.sec:focus-visible,nav a.sec[aria-current]{color:var(--fg);
 nav a.sec:focus-visible{outline:1px solid var(--rule-strong,currentColor);outline-offset:4px}
 nav a.cta{color:var(--fg);border:1px solid var(--fg);padding:9px 14px;border-radius:2px}
 nav a.cta:hover{background:var(--fg);color:var(--bg)}
-@media (max-width:640px){ nav a.sec{display:none} }
+@media (max-width:640px){ nav a.sec,nav .sub{display:none} }
 :where(html.t-home) .hero{position:relative;overflow:hidden;padding-block:72px 64px}
 :where(html.t-area,html.t-areas,html.t-contato,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade,html.t-quem) .hero{position:relative;overflow:hidden;padding-block:84px 72px}
 .hero .wrap{position:relative}
@@ -257,15 +257,6 @@ html:where(.t-area,.t-erro,.t-informativo,.t-informativos,.t-privacidade){scroll
 }
 @media (prefers-reduced-motion:reduce){:where(html.t-informativos) .card .link::after{transition:none} }
 :where(html.t-area,html.t-erro,html.t-informativo,html.t-privacidade) .card:hover h2{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
-.mnav{display:block;border-top:1px solid var(--rule)}
-.top .mnav .wrap{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:0;min-height:0;padding-block:0;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.top .mnav .wrap::-webkit-scrollbar{display:none}
-.mnav a{font-family:var(--display);font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--fg);padding:13px 0;flex:none;border-bottom:0!important}
-.mnav a+a::before{content:"·";display:inline-block;text-decoration:none;color:var(--muted);margin:0 9px;letter-spacing:0}
-.mnav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
-@media (min-width:641px){ .mnav{display:none!important} }
-@media (max-width:640px){ html{scroll-padding-top:108px} }
-@media (max-width:374px){ .mnav a{font-size:10.5px;letter-spacing:.06em} .mnav a+a::before{margin:0 6px} }
 :where(html.t-home) #atalhos{min-height:0;padding-block:56px}
 @media (min-width:861px){:where(html.t-home) .areas.atalhos{grid-template-columns:repeat(2,minmax(0,1fr))} }
 :where(html.t-home) .areas.atalhos .area .corpo{align-self:flex-start}
@@ -336,9 +327,6 @@ h1 .pt{color:var(--accent)}
 h1,h2,h3{font-weight:400}
 .principles li::before{font-weight:400}
 nav a{font-size:13px}
-.mnav a{font-size:11px;letter-spacing:.03em}.mnav a+a::before{margin:0 5px}
-.top .mnav .wrap{justify-content:safe center}
-@media (max-width:384px){ .mnav a{letter-spacing:0} .mnav a+a::before{margin:0 4px} }
 .btn,.link,.skip{font-size:13px}
 .eyebrow,.contact .label,.bloco .sub,.rev .ini,.rev .quando,.meta,.retrato figcaption,footer .oab{font-size:13px}
 .copy{font-size:12px}
@@ -361,3 +349,33 @@ footer{font-size:13.5px}
 @media (max-width:720px){ .topo{right:16px} :where(html.t-area,html.t-areas,html.t-contato,html.t-home,html.t-informativo,html.t-informativos,html.t-quem) .topo{bottom:calc(max(16px,env(safe-area-inset-bottom)) + 68px)} }
 @media (prefers-reduced-motion:reduce){ .topo{transition:none} }
 @media print{ .topo{display:none} }
+
+/* Menu suspenso de Áreas (computador): abre ao passar o mouse ou ao chegar pelo teclado */
+nav .sub{position:relative;display:flex;align-items:center}
+nav .sub-panel{position:absolute;left:50%;top:100%;transform:translateX(-50%);padding-top:14px;display:none;z-index:6}
+nav .sub-panel .box{min-width:250px;background:var(--bg);border:1px solid var(--rule);border-radius:2px;padding:6px 0;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+nav .sub-panel a{display:block;padding:11px 22px;font-size:13px;letter-spacing:.1em;white-space:nowrap;color:var(--muted);border-bottom:0}
+nav .sub-panel a:hover,nav .sub-panel a:focus-visible{color:var(--fg);background:var(--rule)}
+nav .sub-panel a[aria-current="page"]{color:var(--fg);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+nav .sub:hover .sub-panel,nav .sub:focus-within .sub-panel{display:block}
+@media (hover:none){ nav .sub:hover .sub-panel{display:none} nav .sub:focus-within .sub-panel{display:block} }
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) nav .sub-panel .box{box-shadow:0 10px 30px rgba(0,0,0,.45)} }
+/* Menu do celular: botão Menu no cabeçalho e painel abaixo dele */
+.menu-btn{display:none;align-items:center;gap:10px;height:36px;padding:0 12px;background:transparent;color:var(--fg);border:1px solid var(--rule);border-radius:2px;cursor:pointer;font-family:var(--display);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.menu-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+.menu-btn .x{display:none}.top.open .menu-btn .x{display:block}.top.open .menu-btn .bars{display:none}
+.menu-btn:hover{border-color:var(--fg)}.menu-btn:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.mnav{display:none;border-top:1px solid var(--rule);max-height:calc(100vh - 70px);max-height:calc(100svh - 70px);overflow:auto}
+.top.open .mnav{display:block}
+.top .mnav .wrap{display:block;min-height:0;padding-block:6px 10px}
+.mnav a{display:block;font-family:var(--display);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--fg);padding:15px 0;border-bottom:1px solid var(--rule)}
+.mnav .mareas{border-bottom:1px solid var(--rule);padding:4px 0 8px}
+.mnav .mareas a{font-size:14px;letter-spacing:.04em;text-transform:none;color:var(--muted);padding:9px 0 9px 18px;border-bottom:0}
+.mnav .mareas a[aria-current="page"],.mnav a[aria-current="page"]{color:var(--fg)}
+.mnav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+.mnav .mareas a[aria-current="page"]{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.mnav a:last-child{border-bottom:0}
+@media (max-width:640px){ .menu-btn{display:inline-flex;padding:0 10px;gap:8px} nav{gap:10px;flex-wrap:nowrap} nav a.cta{padding:9px 11px} html{scroll-padding-top:72px} }
+@media (max-width:364px){ nav a.cta,.menu-btn{font-size:11px;letter-spacing:.1em} nav a.cta{padding:9px 9px} .menu-btn{padding:0 8px} }
+@media (max-width:330px){ nav{flex-wrap:wrap} }
+@media (min-width:641px){ .mnav,.menu-btn{display:none!important} }
