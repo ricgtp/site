@@ -382,3 +382,6 @@ nav .sub:hover .sub-panel,nav .sub:focus-within .sub-panel{display:block}
 
 /* Parágrafos de abertura (.lead) também justificados no computador, como o corpo do texto */
 @media (min-width:721px){ .lead{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-justify:inter-word} }
+
+/* Texto de abertura da página inicial e descrições dos cartões também justificados no computador */
+@media (min-width:721px){ .hero p,.area p{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-justify:inter-word} }
