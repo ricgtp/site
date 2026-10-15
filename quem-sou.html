@@ -112,8 +112,8 @@ section{border-top:1px solid var(--rule);padding-block:72px}
 .grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:40px}
 @media (max-width:720px){ .grid2{grid-template-columns:1fr;gap:24px} }
 section h1,section h2{font-size:clamp(26px,3.4vw,34px)}
-.retrato{margin:28px 0 0;max-width:240px}
-.retrato img{display:block;width:100%;height:auto;border:1px solid var(--rule)}
+.retrato{margin:28px 0 0;max-width:280px}
+.retrato img{display:block;width:100%;height:auto;border:1px solid var(--rule);filter:brightness(var(--img-dim,1))}
 .retrato figcaption{font-family:var(--display);font-size:12px;letter-spacing:.08em;color:var(--muted);margin-top:10px;line-height:1.5}
 @media (max-width:720px){ .retrato{max-width:200px} }
 .prose p+p{margin-top:18px}
@@ -294,7 +294,7 @@ html[data-hero="b"] .retrato{display:none}
           <p class="eyebrow">Quem sou</p>
           <h1>Quem atende é quem cuida do caso.</h1>
           <figure class="retrato">
-            <img src="/foto.jpg" alt="Ricardo Godoy Tavares Pinto" width="640" height="683">
+            <img src="/quem-sou-foto.jpg?v=1" alt="Ricardo Godoy Tavares Pinto atendendo" width="720" height="781">
             <figcaption>Ricardo Godoy Tavares Pinto<br>OAB/SP nº 233.389</figcaption>
           </figure>
         </div>
