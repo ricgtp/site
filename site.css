@@ -352,3 +352,12 @@ body{font-size:17px}
 .contact .note{font-size:14px}
 footer{font-size:13.5px}
 :where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .fonte,:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .assina{font-size:14px}
+
+/* Voltar ao topo: aparece depois de 600px de rolagem; no celular, sobe para não cobrir o atalho do WhatsApp */
+.topo{position:fixed;right:20px;bottom:max(20px,env(safe-area-inset-bottom));width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:var(--bg);color:var(--fg);border:1px solid var(--rule);border-radius:2px;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility 0s linear .25s;z-index:4}
+.topo.on{opacity:1;visibility:visible;transform:none;transition:opacity .25s ease,transform .25s ease}
+.topo:hover{border-color:var(--fg)}.topo:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.topo svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:720px){ .topo{right:16px} :where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .topo{bottom:calc(max(16px,env(safe-area-inset-bottom)) + 68px)} }
+@media (prefers-reduced-motion:reduce){ .topo{transition:none} }
+@media print{ .topo{display:none} }
