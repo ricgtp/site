@@ -391,3 +391,7 @@ nav .sub:hover .sub-panel,nav .sub:focus-within .sub-panel{display:block}
 :where(html.t-home) .nota .est{letter-spacing:.2em;font-size:14px;color:#c9962f;margin-right:6px;white-space:nowrap}
 :where(html.t-home) .nota strong{font-weight:500;color:var(--fg);font-size:19px;margin-right:2px}
 .rev .ini{white-space:nowrap;font-size:12px;letter-spacing:-.01em}
+
+/* Sublinhados do menu em verde: item atual e passagem do mouse, no computador, na lista de Áreas e no painel do celular */
+nav a.sec{background-image:linear-gradient(var(--accent),var(--accent))}
+nav .sub-panel a[aria-current="page"],.mnav a[aria-current="page"],.mnav .mareas a[aria-current="page"]{text-decoration-color:var(--accent);text-decoration-thickness:1.5px}
