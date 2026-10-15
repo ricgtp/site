@@ -267,7 +267,7 @@ footer .oab{font-family:var(--display);font-weight:400;font-size:12px;letter-spa
 .area{padding:0;overflow:hidden;display:flex;flex-direction:column}
 .area .corpo{padding:26px 24px 28px}
 .area .foto{display:none;aspect-ratio:16/7;overflow:hidden;border-bottom:1px solid var(--rule)}
-.area .foto img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1);transition:transform .6s ease}
+.area .foto img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1);transition:transform .6s ease}.area .foto img.cor{filter:brightness(var(--img-dim,1))}
 a.area:hover .foto img,a.area:focus-visible .foto img{transform:scale(1.05)}
 .area .ico{display:none;margin-bottom:16px;color:var(--fg)}
 .area .ico svg{display:block;width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
@@ -387,11 +387,11 @@ html[data-hero="b"] .retrato{display:none}
 
   <section id="atalhos">
     <div class="wrap rv">
-      <div class="areas atalhos" data-v="">
-        <a class="area" href="/quem-sou.html"><div class="corpo"><h3>Quem sou</h3><p>Advogado em Santos desde 2005. Atendimento pessoal, do começo ao fim, em linguagem clara.</p></div></a>
-        <a class="area" href="/areas/"><div class="corpo"><h3>Áreas de atuação</h3><p>Imóveis, consumidor, contratos, planos de saúde, condomínio e vizinhança, e planejamento sucessório.</p></div></a>
-        <a class="area" href="/informativos/"><div class="corpo"><h3>Informativos</h3><p>Textos curtos e em linguagem simples sobre direitos do dia a dia.</p></div></a>
-        <a class="area" href="/contato.html"><div class="corpo"><h3>Contato</h3><p>Atendimento com hora marcada. Agende pelo WhatsApp ou por e-mail.</p></div></a>
+      <div class="areas atalhos" data-v="fotos">
+        <a class="area" href="/quem-sou.html"><div class="foto"><img class="cor" src="/foto-thumb.jpg?v=1" alt="" width="480" height="480" loading="lazy" style="object-position:50% 20%"></div><div class="corpo"><h3>Quem sou</h3><p>Advogado em Santos desde 2005. Atendimento pessoal, do começo ao fim, em linguagem clara.</p></div></a>
+        <a class="area" href="/areas/"><div class="foto"><img class="cor" src="/areas/img/thumb/imobiliario.jpg?v=7" alt="" width="900" height="344" loading="lazy" style="object-position:50% 50%"></div><div class="corpo"><h3>Áreas de atuação</h3><p>Imóveis, consumidor, contratos, planos de saúde, condomínio e vizinhança, e planejamento sucessório.</p></div></a>
+        <a class="area" href="/informativos/"><div class="foto"><img class="cor" src="/areas/img/thumb/civel-em-geral.jpg?v=2" alt="" width="900" height="680" loading="lazy" style="object-position:50% 58%"></div><div class="corpo"><h3>Informativos</h3><p>Textos curtos e em linguagem simples sobre direitos do dia a dia.</p></div></a>
+        <a class="area" href="/contato.html"><div class="foto"><img class="cor" src="/areas/img/thumb/consumidor.jpg?v=2" alt="" width="900" height="600" loading="lazy" style="object-position:50% 50%"></div><div class="corpo"><h3>Contato</h3><p>Atendimento com hora marcada. Agende pelo WhatsApp ou por e-mail.</p></div></a>
       </div>
     </div>
   </section>
