@@ -325,6 +325,10 @@ html[data-hero="b"] .retrato{display:none}
 @media (min-width:641px){ .mnav{display:none!important} }
 @media (max-width:640px){ html{scroll-padding-top:108px} }
 @media (max-width:374px){ .mnav a{font-size:10.5px;letter-spacing:.06em} .mnav a+a::before{margin:0 6px} }
+/* atalhos para as paginas */
+#atalhos{min-height:0;padding-block:56px}
+@media (min-width:861px){ .areas.atalhos{grid-template-columns:repeat(2,minmax(0,1fr))} }
+.areas.atalhos .area .corpo{align-self:flex-start}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -332,7 +336,7 @@ html[data-hero="b"] .retrato{display:none}
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#inicio" aria-label="Godoy Advogado, início">
+    <a class="brand" href="/" aria-label="Godoy Advogado, início">
       <svg viewBox="0 0 893.33 339.11" role="img" aria-label="Godoy Advogado"><path d="M 807.73 267.73 L 84.78 267.73 L 84.78 264.43 L 807.73 264.43 Z"/>
 <path d="M 390.81 122.89 C 390.81 163.47 359.75 194.07 318.55 194.07 C 277.36 194.07 246.29 163.47 246.29 122.89 C 246.29 82.31 277.36 51.71 318.55 51.71 C 359.75 51.71 390.81 82.31 390.81 122.89 M 318.55 45.54 C 273.72 45.54 239.91 78.80 239.91 122.89 C 239.91 166.99 273.72 200.24 318.55 200.24 C 363.38 200.24 397.20 166.99 397.20 122.89 C 397.20 78.80 363.38 45.54 318.55 45.54"/>
 <path d="M 569.39 122.89 C 569.39 165.08 539.31 193.43 494.54 193.43 L 443.04 193.43 L 443.04 52.36 L 494.54 52.36 C 539.31 52.36 569.39 80.70 569.39 122.89 M 494.97 46.19 L 436.65 46.19 L 436.65 199.59 L 494.97 199.59 C 542.55 199.59 575.78 168.05 575.78 122.89 C 575.78 77.73 542.55 46.19 494.97 46.19"/>
@@ -350,14 +354,14 @@ html[data-hero="b"] .retrato{display:none}
 <path d="M 767.55 300.71 C 764.38 300.71 761.47 301.51 758.79 303.09 C 756.11 304.68 753.98 306.82 752.39 309.51 C 750.82 312.21 750.02 315.16 750.02 318.37 C 750.02 321.58 750.82 324.54 752.39 327.23 C 753.98 329.93 756.11 332.07 758.79 333.65 C 761.47 335.23 764.38 336.03 767.55 336.03 C 770.72 336.03 773.64 335.23 776.32 333.65 C 778.99 332.07 781.11 329.93 782.68 327.23 C 784.24 324.54 785.03 321.58 785.03 318.37 C 785.03 315.16 784.24 312.21 782.68 309.51 C 781.11 306.82 778.99 304.68 776.32 303.09 C 773.64 301.51 770.72 300.71 767.55 300.71 M 767.55 338.86 C 763.89 338.86 760.49 337.95 757.37 336.12 C 754.24 334.29 751.77 331.80 749.96 328.65 C 748.14 325.50 747.24 322.07 747.24 318.37 C 747.24 314.66 748.14 311.24 749.96 308.09 C 751.77 304.95 754.24 302.45 757.37 300.62 C 760.49 298.79 763.89 297.88 767.55 297.88 C 771.21 297.88 774.61 298.79 777.74 300.62 C 780.87 302.45 783.34 304.95 785.15 308.09 C 786.96 311.24 787.86 314.66 787.86 318.37 C 787.86 322.07 786.96 325.50 785.15 328.65 C 783.34 331.80 780.87 334.29 777.74 336.12 C 774.61 337.95 771.21 338.86 767.55 338.86"/></svg>
     </a>
     <nav aria-label="Seções">
-      <a class="sec" href="#escritorio">Quem sou</a>
-      <a class="sec" href="#areas">Áreas de atuação</a>
-      <a class="sec" href="informativos/">Informativos</a>
-      <a class="sec" href="#contato">Contato</a>
+      <a class="sec" href="/quem-sou.html">Quem sou</a>
+      <a class="sec" href="/areas/">Áreas de atuação</a>
+      <a class="sec" href="/informativos/">Informativos</a>
+      <a class="sec" href="/contato.html">Contato</a>
       <a class="cta" href="https://wa.me/5513991617657" target="_blank" rel="noopener">WhatsApp</a>
     </nav>
   </div>
-<nav class="mnav" id="mnav" aria-label="Seções"><div class="wrap"><a href="#escritorio">Quem sou</a><a href="#areas">Áreas</a><a href="informativos/">Informativos</a><a href="#contato">Contato</a></div></nav>
+<nav class="mnav" id="mnav" aria-label="Seções"><div class="wrap"><a href="/quem-sou.html">Quem sou</a><a href="/areas/">Áreas</a><a href="/informativos/">Informativos</a><a href="/contato.html">Contato</a></div></nav>
 </header>
 <svg class="wm" viewBox="0 0 653.99 690" aria-hidden="true"><path d="M 332.05 403.02 L 332.55 423.54 L 629.97 423.54 C 595.56 569.13 472.49 670.45 329.33 670.45 C 158.52 670.45 19.55 524.46 19.55 345.00 C 19.55 165.54 158.52 19.55 329.33 19.55 C 450.03 19.55 560.61 94.21 611.07 209.75 L 611.93 211.73 L 633.11 211.73 L 631.21 207.16 C 578.64 81.32 460.15 0.00 329.33 0.00 C 147.75 0.00 0.00 154.77 0.00 345.00 C 0.00 535.23 147.75 690.00 329.33 690.00 C 488.54 690.00 624.80 570.99 653.32 407.01 L 653.99 403.15 Z"/>
 <path d="M 332.55 361.12 L 652.71 361.17 L 653.40 340.76 L 332.05 340.60 Z"/></svg>
@@ -381,47 +385,13 @@ html[data-hero="b"] .retrato{display:none}
     </div>
   </div>
 
-  <section id="escritorio">
+  <section id="atalhos">
     <div class="wrap rv">
-      <div class="grid2">
-        <div>
-          <p class="eyebrow">Quem sou</p>
-          <h2>Quem atende é quem cuida do caso.</h2>
-          <figure class="retrato">
-            <img src="foto.jpg" alt="Ricardo Godoy Tavares Pinto" width="640" height="683">
-            <figcaption>Ricardo Godoy Tavares Pinto<br>OAB/SP nº 233.389</figcaption>
-          </figure>
-        </div>
-        <div class="prose">
-          <div class="bloco"><p>Sou Ricardo Godoy Tavares Pinto, advogado inscrito na OAB/SP sob o nº 233.389 e em atividade desde 2005. Atendo em Santos, por meio da Ricardo Godoy Tavares Pinto Sociedade Individual de Advocacia, OAB/SP nº 65.014.</p></div>
-          <div class="bloco"><h3 class="sub">Atendimento</h3><p>Começo por ouvir. Quem me procura costuma chegar em um momento difícil, e é recebido com a atenção que esse momento pede. Explico cada caso em linguagem clara, quantas vezes forem necessárias, para que você entenda as alternativas, os riscos e o que esperar de cada etapa, inclusive quando a resposta não é a que você gostaria de ouvir.</p></div>
-          <div class="bloco"><h3 class="sub">Imóveis e vizinhança</h3><p>Atuo principalmente com imóveis: compra e venda, locação, regularização e as questões de vizinhança e condomínio, como infiltrações, obras e cobrança de cotas.</p></div>
-          <div class="bloco"><h3 class="sub">Consumidor, contratos e sucessões</h3><p>Atuo também com direito do consumidor, em especial contra bancos e fornecedores, e com planos de saúde, nas negativas de cobertura e nos reajustes. Elaboro, reviso e negocio contratos, para pessoas e para empresas, e assessoro empresas da construção civil e do mercado imobiliário em contratos, obras, cobranças e defesa. E ajudo famílias a organizar o patrimônio com antecedência, por meio do planejamento sucessório, e a resolver inventários e alvarás quando o problema já chegou.</p></div>
-          <div class="bloco"><h3 class="sub">Conversa antes do processo</h3><p>Antes do processo, a conversa: negocio, notifico e busco primeiro o acordo, e vou a juízo quando ele não é possível ou não vale a pena. O acompanhamento é próximo e contínuo, em consultoria, composição e litígio. Você é informado do andamento, tem as dúvidas respondidas sem demora e sabe que cada prazo e cada manifestação passam pelas minhas mãos.</p></div>
-        </div>
-      </div>
-      <ul class="principles">
-        <li>Atendimento pessoal, do começo ao fim.</li>
-        <li>Explicações claras, sem juridiquês, quantas vezes forem necessárias.</li>
-        <li>Retorno rápido e informação constante sobre o andamento do caso.</li>
-        <li>Avaliação franca do caso, sem promessa de resultado.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="areas">
-    <div class="wrap rv">
-      <p class="eyebrow">Áreas de atuação</p>
-      <h2>Onde atuo.</h2>
-      <p class="lead">Antes do processo, a conversa: em qualquer das áreas, busco primeiro o acordo, e vou a juízo quando ele não é possível ou não vale a pena.</p>
-      <div class="areas" data-v="fotos">
-        <a class="area" href="areas/imobiliario.html"><div class="foto"><img src="areas/img/thumb/imobiliario.jpg" alt="" width="900" height="400" loading="lazy" style="object-position:50% 50%"></div><div class="corpo"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5M5.5 10v10h13V10M10 20v-6h4v6"/></svg></span><h3>Imobiliário</h3><p>Compra e venda, locação, posse e propriedade: contratos, despejo, ações possessórias e regularização de imóveis.</p></div></a>
-        <a class="area" href="areas/consumidor.html"><div class="foto"><img src="areas/img/thumb/consumidor.jpg" alt="" width="900" height="400" loading="lazy" style="object-position:50% 50%"></div><div class="corpo"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8Zm4 0V6.5a3 3 0 0 1 6 0V8"/></svg></span><h3>Direito do consumidor</h3><p>Relações de consumo com bancos e fornecedores: fraudes, cobranças indevidas e serviços que falham, em juízo e fora dele.</p></div></a>
-        <a class="area" href="areas/contratos-e-negociacoes.html"><div class="foto"><img src="areas/img/thumb/contratos-e-negociacoes.jpg" alt="" width="900" height="400" loading="lazy" style="object-position:50% 50%"></div><div class="corpo"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h8l4 4v14H7V3Zm8 0v4h4M10 12h6M10 16h6"/></svg></span><h3>Contratos e negociações</h3><p>Elaboração, revisão e negociação de contratos, para pessoas e empresas, inclusive do setor da construção civil. Notificações, acordos, inadimplemento, revisão e rescisão.</p></div></a>
-        <a class="area" href="areas/planos-de-saude.html"><div class="foto"><img src="areas/img/thumb/planos-de-saude.jpg" alt="" width="900" height="400" loading="lazy" style="object-position:50% 34%"></div><div class="corpo"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10Z"/><path d="M12 9v5M9.5 11.5h5"/></svg></span><h3>Planos de saúde</h3><p>Negativas de cobertura, reajustes e rescisões de contrato com operadoras, em juízo e fora dele.</p></div></a>
-        <a class="area" href="areas/condominio-e-vizinhanca.html"><div class="foto"><img src="areas/img/thumb/condominio-e-vizinhanca.jpg" alt="" width="900" height="400" loading="lazy" style="object-position:50% 45%"></div><div class="corpo"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 21V4h9v17M14 9h5v12M4 21h16M8 8h3M8 12h3M8 16h3M16.5 13h.5M16.5 17h.5"/></svg></span><h3>Condomínio e vizinhança</h3><p>Relações entre condôminos, condomínio e administradora, e conflitos entre vizinhos: cobrança de cotas, infiltrações, obras, convenção, assembleias e barulho.</p></div></a>
-        <a class="area" href="areas/planejamento-sucessorio.html"><div class="foto"><img src="areas/img/thumb/planejamento-sucessorio.jpg" alt="" width="900" height="400" loading="lazy" style="object-position:50% 52%"></div><div class="corpo"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21v-8M12 13c-4 0-6.5-2.3-6.5-5.5a6.5 6.5 0 0 1 13 0C18.5 10.7 16 13 12 13ZM12 13l-2.5-2.5M12 10.5l2.5-2.5"/></svg></span><h3>Planejamento sucessório</h3><p>Organização do patrimônio da família com antecedência, como doação e testamento, e inventários e alvarás quando o problema já chegou.</p></div></a>
-        <a class="area" href="areas/civel-em-geral.html"><div class="foto"><img src="areas/img/thumb/civel-em-geral.jpg" alt="" width="900" height="400" loading="lazy" style="object-position:50% 60%"></div><div class="corpo"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v16M7.5 20h9M5 7.5h14M5 7.5 2.5 14a2.5 2.5 0 0 0 5 0L5 7.5Zm14 0L16.5 14a2.5 2.5 0 0 0 5 0L19 7.5Z"/></svg></span><h3>Cível em geral</h3><p>Responsabilidade civil, cobranças e execução: ações e defesas, do processo de conhecimento ao cumprimento de sentença.</p></div></a>
+      <div class="areas atalhos" data-v="">
+        <a class="area" href="/quem-sou.html"><div class="corpo"><h3>Quem sou</h3><p>Advogado em Santos desde 2005. Atendimento pessoal, do começo ao fim, em linguagem clara.</p></div></a>
+        <a class="area" href="/areas/"><div class="corpo"><h3>Áreas de atuação</h3><p>Imóveis, consumidor, contratos, planos de saúde, condomínio e vizinhança, e planejamento sucessório.</p></div></a>
+        <a class="area" href="/informativos/"><div class="corpo"><h3>Informativos</h3><p>Textos curtos e em linguagem simples sobre direitos do dia a dia.</p></div></a>
+        <a class="area" href="/contato.html"><div class="corpo"><h3>Contato</h3><p>Atendimento com hora marcada. Agende pelo WhatsApp ou por e-mail.</p></div></a>
       </div>
     </div>
   </section>
@@ -457,46 +427,6 @@ html[data-hero="b"] .retrato{display:none}
           <a class="link" href="https://www.google.com/maps?cid=15117534470400798219" target="_blank" rel="noopener">Ver todas no Google</a>
         </div>
         <p class="aval-nota">As avaliações são opiniões de clientes e não representam promessa de resultado, que depende de cada caso.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contato">
-    <div class="wrap rv">
-      <p class="eyebrow">Contato</p>
-      <h2>Fale comigo.</h2>
-      <div class="contact">
-        <div class="item">
-          <div class="label">Celular e WhatsApp</div>
-          <div class="value" id="tel">+55 13 99161-7657</div>
-          <div class="row"><a class="link" href="https://wa.me/5513991617657" target="_blank" rel="noopener">Abrir conversa</a><button class="copy" type="button" data-copy="+55 13 99161-7657">Copiar</button></div>
-        </div>
-        <div class="item">
-          <div class="label">E-mail</div>
-          <div class="value" id="mail">ricardo@godoyadvocacia.adv.br</div>
-          <div class="row"><a class="link" href="mailto:ricardo@godoyadvocacia.adv.br">Escrever</a><button class="copy" type="button" data-copy="ricardo@godoyadvocacia.adv.br">Copiar</button></div>
-        </div>
-        <div class="item">
-          <div class="label">Endereço</div>
-          <div class="value">Av. Conselheiro Nébias, 754, conjunto 1.621<br>Helbor Offices Vila Rica, Boqueirão<br>Santos/SP, CEP 11045-002</div>
-          <div class="row"><a class="link" href="https://www.google.com/maps?cid=15117534470400798219" target="_blank" rel="noopener">Ver no mapa</a></div>
-        </div>
-        <div class="item">
-          <div class="label">Horário</div>
-          <div class="value">Segunda a sexta, das 10h às 17h<br>Sábado, das 10h às 12h</div>
-          <p class="note">Atendimento presencial somente com hora marcada. Agende pelo WhatsApp ou por e-mail.</p>
-        </div>
-        <div class="item">
-          <div class="label">Instagram</div>
-          <div class="value">@consomedireito</div>
-          <p class="note">Conteúdo informativo sobre consumo, condomínio, imóveis e contratos.</p>
-          <div class="row"><a class="link" href="https://www.instagram.com/consomedireito/" target="_blank" rel="noopener">Ver perfil</a><a class="link" href="informativos/">Ler os informativos</a></div>
-        </div>
-        <div class="item">
-          <div class="label">Perfil no Google</div>
-          <div class="value">Ricardo Godoy Tavares Pinto Advocacia</div>
-          <div class="row"><a class="link" href="https://www.google.com/maps?cid=15117534470400798219" target="_blank" rel="noopener">Ver perfil</a><a class="link" href="https://g.page/r/CQtu9jOBRczREAE/review" target="_blank" rel="noopener">Avaliar no Google</a></div>
-        </div>
       </div>
     </div>
   </section>
@@ -549,26 +479,10 @@ document.querySelectorAll('.copy').forEach(function(b){
 </script>
 
 <script>
+/* Links antigos com #secao levam a pagina propria. */
 (function(){
-  if(!('IntersectionObserver' in window)) return;
-  var ids=['escritorio','areas','contato'], links=document.querySelectorAll('nav a[href^="#"]');
-  function mark(id){links.forEach(function(a){ if(a.getAttribute('href')==='#'+id) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); });}
-  var cur=null;
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){cur=e.target.id; mark(cur);} else if(cur===e.target.id){cur=null; mark('');} });},{rootMargin:'-35% 0px -60% 0px'});
-  ids.forEach(function(i){var el=document.getElementById(i); if(el) io.observe(el);});
-})();
-</script>
-<script>
-/* Chegando de outra pagina com #secao: garante que a rolagem va ate a secao e fique la, mesmo com imagens e fontes carregando depois. */
-(function(){
-  var h=location.hash; if(!h||h.length<2) return;
-  var el=document.getElementById(decodeURIComponent(h.slice(1))); if(!el) return;
-  var moved=false;
-  function go(){ if(!moved) el.scrollIntoView({block:'start'}); }
-  ['wheel','touchstart','keydown','mousedown'].forEach(function(ev){addEventListener(ev,function(){moved=true},{once:true,passive:true})});
-  go();
-  addEventListener('load',function(){ go(); setTimeout(go,300); setTimeout(go,1200); });
-  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(go);
+  var m={'#escritorio':'/quem-sou.html','#areas':'/areas/','#contato':'/contato.html'};
+  if(m[location.hash]) location.replace(m[location.hash]);
 })();
 </script>
 </body>
