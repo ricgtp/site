@@ -165,11 +165,11 @@ nav a.cta:hover{background:var(--fg);color:var(--bg)}
 @media (max-width:640px){ nav a.sec{display:none} }
 
 /* hero */
-.hero{position:relative;overflow:hidden;padding-block:84px 72px}
+.hero{position:relative;overflow:hidden;padding-block:72px 64px}
 .hero .wrap{position:relative}
 /* páginas: cada seção ocupa uma tela; o G fica fixo no centro e cada tela passa por ele */
-html{scroll-snap-type:y proximity;scroll-padding-top:64px}
-.hero,section{position:relative;min-height:calc(100vh - 64px);min-height:calc(100svh - 64px);display:flex;align-items:center;scroll-snap-align:start}
+html{scroll-padding-top:64px}
+.hero,section{position:relative;display:flex;align-items:center}
 .hero .wrap,section .wrap{position:relative;z-index:1;width:100%}
 .wm{position:fixed;left:50%;top:calc(50% + 32px);transform:translate(-50%,-50%);height:min(62vh,460px);width:auto;max-width:80vw;fill:var(--wm);pointer-events:none;z-index:0}
 main,footer{position:relative;z-index:1}
