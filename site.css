@@ -379,3 +379,6 @@ nav .sub:hover .sub-panel,nav .sub:focus-within .sub-panel{display:block}
 @media (max-width:364px){ nav a.cta,.menu-btn{font-size:11px;letter-spacing:.1em} nav a.cta{padding:9px 9px} .menu-btn{padding:0 8px} }
 @media (max-width:330px){ nav{flex-wrap:wrap} }
 @media (min-width:641px){ .mnav,.menu-btn{display:none!important} }
+
+/* Parágrafos de abertura (.lead) também justificados no computador, como o corpo do texto */
+@media (min-width:721px){ .lead{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-justify:inter-word} }
