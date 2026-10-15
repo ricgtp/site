@@ -184,7 +184,7 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 .faixa,.area .foto img{filter:grayscale(1) brightness(var(--img-dim,1))}
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){--img-dim:.86} }
 :root[data-theme="dark"]{--img-dim:.86}
-</style>
+:root{--accent:#24493c}@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){--accent:#8fc4ae} }:root[data-theme="dark"]{--accent:#8fc4ae}.tag{color:var(--accent)}.faixa.cor{filter:brightness(var(--img-dim,1))}</style>
 </head>
 <body>
 <header class="top">
@@ -214,8 +214,8 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 <path d="M 332.55 361.12 L 652.71 361.17 L 653.40 340.76 L 332.05 340.60 Z"/></svg>
 <main>
 <div class="page"><div class="wrap">
-<img class="faixa" src="/areas/img/consumidor.jpg" alt="" width="1800" height="400" loading="eager" style="object-position:50% 52%">
-<p class="eyebrow">Informativos <span class="tp">∴</span> Consumidor</p>
+<img class="faixa cor" src="/areas/img/consumidor.jpg?v=2" alt="" width="1800" height="400" loading="eager" style="object-position:50% 52%">
+<p class="eyebrow">Informativos <span class="tp">∴</span> <span class="tag">Consumidor</span></p>
 <h1>Viagem atrasada: o que a companhia de avião ou de ônibus deve oferecer.</h1>
 <p class="meta">13 de outubro de 2026</p>
 <div class="art">

@@ -181,7 +181,7 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 @media (min-width:721px){
   .art p:not(.lead):not(.assina):not(.fonte):not(.meta),.art li{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-justify:inter-word}
 }
-</style>
+:root{--accent:#24493c}@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){--accent:#8fc4ae} }:root[data-theme="dark"]{--accent:#8fc4ae}.tag{color:var(--accent)}.card.cf{display:flex;flex-direction:row;align-items:stretch;padding:0;overflow:hidden}.card.cf .foto{flex:0 0 clamp(190px,27%,270px);position:relative;border-right:1px solid var(--rule);overflow:hidden}.card.cf .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:brightness(var(--img-dim,1));transition:transform .6s ease}.card.cf:hover .foto img,.card.cf:focus-visible .foto img{transform:scale(1.05)}.card.cf .txt{flex:1;padding:26px 28px 28px;min-width:0}.card .link{color:var(--accent);border-bottom-color:var(--accent)}.card .link:hover{color:var(--accent);border-bottom-color:var(--accent)}@media (max-width:640px){ .card.cf{flex-direction:column} .card.cf .foto{flex:none;aspect-ratio:16/7;border-right:0;border-bottom:1px solid var(--rule)} }</style>
 </head>
 <body>
 <header class="top">
@@ -215,18 +215,18 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 <h1>Direito em linguagem simples.</h1>
 <p class="lead">Textos curtos sobre os temas que publico no Instagram e no Perfil no Google.</p>
 <div class="lista">
-<a class="card" href="/informativos/viagem-atrasada.html">
-<p class="meta" style="margin:0">13 de outubro de 2026 <span class="tp">∴</span> Consumidor</p>
+<a class="card cf" href="/informativos/viagem-atrasada.html"><div class="foto"><img src="/areas/img/thumb/consumidor.jpg?v=2" alt="" width="900" height="600" loading="lazy" style="object-position:50% 50%"></div><div class="txt">
+<p class="meta" style="margin:0">13 de outubro de 2026 <span class="tp">∴</span> <span class="tag">Consumidor</span></p>
 <h2>Viagem atrasada: o que a companhia de avião ou de ônibus deve oferecer.</h2>
 <p>O que a empresa de avião ou de ônibus deve oferecer em caso de atraso, e o que muda na assistência aérea a partir de 26/10/2026.</p>
 <span class="link">Ler</span>
-</a>
-<a class="card" href="/informativos/gato-por-lebre.html">
-<p class="meta" style="margin:0">9 de outubro de 2026 <span class="tp">∴</span> Consumidor</p>
+</div></a>
+<a class="card cf" href="/informativos/gato-por-lebre.html"><div class="foto"><img src="/areas/img/thumb/consumidor.jpg?v=2" alt="" width="900" height="600" loading="lazy" style="object-position:50% 50%"></div><div class="txt">
+<p class="meta" style="margin:0">9 de outubro de 2026 <span class="tp">∴</span> <span class="tag">Consumidor</span></p>
 <h2>Pediu lebre e chegou gato? Seus direitos nas compras pela internet.</h2>
 <p>Produto errado, entrega atrasada ou arrependimento: o que fazer quando a compra pela internet não sai como o combinado.</p>
 <span class="link">Ler</span>
-</a>
+</div></a>
 </div>
 </div></div>
 </main>
