@@ -395,3 +395,9 @@ nav .sub:hover .sub-panel,nav .sub:focus-within .sub-panel{display:block}
 /* Sublinhados do menu em verde: item atual e passagem do mouse, no computador, na lista de Áreas e no painel do celular */
 nav a.sec{background-image:linear-gradient(var(--accent),var(--accent))}
 nav .sub-panel a[aria-current="page"],.mnav a[aria-current="page"],.mnav .mareas a[aria-current="page"]{text-decoration-color:var(--accent);text-decoration-thickness:1.5px}
+
+/* Sombras e bordas de passagem do mouse levemente esverdeadas, nos dois temas */
+:root{--card-shadow:0 22px 34px -20px rgba(36,73,60,.55)}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){--card-shadow:0 0 0 1px rgba(143,196,174,.42),0 24px 40px -18px rgba(143,196,174,.36)} }
+:root[data-theme="dark"]{--card-shadow:0 0 0 1px rgba(143,196,174,.42),0 24px 40px -18px rgba(143,196,174,.36)}
+@media (hover:hover){ a.area:hover,a.area:focus-visible,.card:hover,.card:focus-visible,.rev:hover{border-color:var(--accent)} }
