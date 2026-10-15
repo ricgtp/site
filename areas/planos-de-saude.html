@@ -85,7 +85,7 @@ main,footer{position:relative;z-index:1}
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
 .btn{font-family:var(--display);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--fg);border:1px solid var(--fg);padding:13px 20px;border-radius:2px;display:inline-flex;align-items:center;gap:10px;background:transparent;cursor:pointer;line-height:1}
 .btn.primary{background:#24493c;border-color:#24493c;color:#fff}@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .btn.primary{background:#2f6552;border-color:#2f6552} }:root[data-theme="dark"] .btn.primary{background:#2f6552;border-color:#2f6552}
-.btn.primary:hover{opacity:.88}
+.btn.primary:hover{opacity:.88}@media (hover:hover){ .btn.primary{transition:transform .28s ease,box-shadow .28s ease,opacity .28s ease} .btn.primary:hover,.btn.primary:focus-visible{position:relative;z-index:2;transform:translateY(-6px) scale(1.02);opacity:1;box-shadow:var(--card-shadow,0 22px 34px -20px rgba(0,0,0,.45))} }
 .btn:not(.primary):hover{background:var(--btn-hover)}
 .btn:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
 .btn svg{width:16px;height:16px;fill:currentColor}
