@@ -40,7 +40,7 @@ footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 .principles li::before{content:counter(p,decimal-leading-zero);display:block;font-family:var(--display);font-weight:300;font-size:12px;letter-spacing:.24em;color:var(--muted);margin-bottom:8px}
 /* menu: secao atual */
 .mnav a[aria-current="true"]{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
-:root{--accent:#24493c}@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){--accent:#8fc4ae} }:root[data-theme="dark"]{--accent:#8fc4ae}.contact .label{display:flex;align-items:center;gap:10px}.contact .label .ico{display:inline-flex;color:var(--accent)}.contact .label svg{width:18px;height:18px;flex:none}.contact .label svg.st{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.contact .label svg.fl{fill:currentColor}.contact .link{color:var(--accent);border-bottom-color:var(--accent)}.contact .link:hover{color:var(--accent);border-bottom-color:var(--accent);opacity:.8}.cwrap{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);column-gap:44px;align-items:start}.cwrap>*{grid-column:2}.cwrap>.cfoto{grid-column:1;grid-row:1 / span 3;margin:8px 0 0;position:sticky;top:96px}.cfoto img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--rule);border-radius:2px;filter:brightness(var(--img-dim,1))}@media (max-width:720px){ .cwrap{display:block} .cwrap>.cfoto{position:static;margin:0 0 28px} .cfoto img{aspect-ratio:16/10;object-position:50% 60%} }</style>
+:root{--accent:#24493c}@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){--accent:#8fc4ae} }:root[data-theme="dark"]{--accent:#8fc4ae}.contact .label{display:flex;align-items:center;gap:10px}.contact .label .ico{display:inline-flex;color:var(--accent)}.contact .label svg{width:18px;height:18px;flex:none}.contact .label svg.st{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.contact .label svg.fl{fill:currentColor}.contact .link{color:var(--accent);border-bottom-color:var(--accent)}.contact .link:hover{color:var(--accent);border-bottom-color:var(--accent);opacity:.8}</style>
 <style>
 /* Layout: a single white sheet, like the letterhead. Hairlines frame the sections; the G sits behind the opening as a watermark; spaced caps in Montserrat are the brand's own device (A D V O G A D O). */
 :root{
@@ -288,8 +288,7 @@ html[data-hero="b"] .retrato{display:none}
 
 <main>
   <section id="contato">
-    <div class="wrap rv cwrap">
-      <figure class="cfoto"><img src="/contato-escritorio.jpg?v=1" alt="Sala de atendimento do escritório, com vista para a cidade" width="691" height="921" loading="eager"></figure>
+    <div class="wrap rv">
       <p class="eyebrow">Contato</p>
       <h1>Fale comigo.</h1>
       <div class="contact">
