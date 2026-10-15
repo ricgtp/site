@@ -332,6 +332,3 @@ html:where(.t-area,.t-erro,.t-informativo,.t-informativos,.t-privacidade){scroll
 @media (min-width:521px){:where(html.t-home) #como .principles li{border-bottom:0}}
 @media (max-width:520px){:where(html.t-home) #como .principles{grid-template-columns:1fr}:where(html.t-home) #como .principles li{padding:16px 0;border-bottom:1px solid var(--rule)}:where(html.t-home) #como .principles li:last-child{border-bottom:0}}
 h1 .pt{color:var(--accent)}
-/* Botão dourado: Avaliar no Google, na página inicial. Fundo cheio para manter contraste nos dois temas. */
-:where(html.t-home) .aval-nav .btn.ouro{background:#c9962f;border-color:#c9962f;color:#1e1e1e;font-weight:600}
-:where(html.t-home) .aval-nav .btn.ouro:hover,:where(html.t-home) .aval-nav .btn.ouro:focus-visible{background:#c9962f;border-color:#c9962f;color:#1e1e1e;opacity:1}
