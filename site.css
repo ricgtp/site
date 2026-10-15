@@ -332,3 +332,8 @@ html:where(.t-area,.t-erro,.t-informativo,.t-informativos,.t-privacidade){scroll
 @media (min-width:521px){:where(html.t-home) #como .principles li{border-bottom:0}}
 @media (max-width:520px){:where(html.t-home) #como .principles{grid-template-columns:1fr}:where(html.t-home) #como .principles li{padding:16px 0;border-bottom:1px solid var(--rule)}:where(html.t-home) #como .principles li:last-child{border-bottom:0}}
 h1 .pt{color:var(--accent)}
+/* Botão verde dentro do bloco de avaliações (Avaliar no Google): as regras genéricas de .aval-nav .btn deixavam o fundo transparente. */
+.aval-nav .btn.primary,.aval-nav .btn.primary:hover,.aval-nav .btn.primary:focus-visible{background:#24493c;border-color:#24493c;color:#fff}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .aval-nav .btn.primary,:root:not([data-theme="light"]) .aval-nav .btn.primary:hover,:root:not([data-theme="light"]) .aval-nav .btn.primary:focus-visible{background:#2f6552;border-color:#2f6552;color:#fff} }
+:root[data-theme="dark"] .aval-nav .btn.primary,:root[data-theme="dark"] .aval-nav .btn.primary:hover,:root[data-theme="dark"] .aval-nav .btn.primary:focus-visible{background:#2f6552;border-color:#2f6552;color:#fff}
+.aval-nav .btn.primary:hover{opacity:.88}
