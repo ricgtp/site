@@ -310,14 +310,6 @@ html:where(.t-area,.t-erro,.t-informativo,.t-informativos,.t-privacidade){scroll
 @media (max-width:640px){:where(html.t-informativos) .card.cf{flex-direction:column}:where(html.t-informativos) .card.cf .foto{flex:none;aspect-ratio:16/7;border-right:0;border-bottom:1px solid var(--rule)} }
 :where(html.t-area) .faixa{display:block;width:100%;height:auto;aspect-ratio:4.5/1;object-fit:cover;object-position:50% 36%;filter:grayscale(1);margin:0 0 34px}
 :where(html.t-area,html.t-informativo) .faixa.cor{filter:brightness(var(--img-dim,1))}
-.tema{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;padding:0;background:transparent;color:var(--fg);border:1px solid var(--rule);border-radius:2px;cursor:pointer}
-.tema:hover{border-color:var(--fg)}
-.tema:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
-.tema svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.tema .sol{display:none}
-@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .tema .lua{display:none} :root:not([data-theme="light"]) .tema .sol{display:block} }
-:root[data-theme="dark"] .tema .lua{display:none}
-:root[data-theme="dark"] .tema .sol{display:block}
 .skip{position:absolute;left:16px;top:-200px;z-index:20;background:var(--bg);color:var(--fg);border:1px solid var(--fg);padding:10px 14px;border-radius:2px;font-family:var(--display);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
 .skip:focus{top:16px;outline:2px solid var(--fg);outline-offset:3px}
 :root:where(.t-area,.t-erro,.t-home,.t-privacidade){--accent:#24493c}
