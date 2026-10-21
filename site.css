@@ -401,3 +401,15 @@ nav .sub-panel a[aria-current="page"],.mnav a[aria-current="page"],.mnav .mareas
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){--card-shadow:0 0 0 1px rgba(143,196,174,.42),0 24px 40px -18px rgba(143,196,174,.36)} }
 :root[data-theme="dark"]{--card-shadow:0 0 0 1px rgba(143,196,174,.42),0 24px 40px -18px rgba(143,196,174,.36)}
 @media (hover:hover){ a.area:hover,a.area:focus-visible,.card:hover,.card:focus-visible,.rev:hover{border-color:var(--accent)} }
+
+/* Aviso de contatos institucionais (início) */
+:where(html.t-home){--alerta:#b42318;--alerta-borda:rgba(180,35,24,.38);--alerta-fundo:rgba(180,35,24,.06)}
+@media (prefers-color-scheme:dark){:root:where(.t-home):not([data-theme="light"]){--alerta:#f28b82;--alerta-borda:rgba(242,139,130,.42);--alerta-fundo:rgba(242,139,130,.08)} }
+:root:where(.t-home)[data-theme="dark"]{--alerta:#f28b82;--alerta-borda:rgba(242,139,130,.42);--alerta-fundo:rgba(242,139,130,.08)}
+:where(html.t-home) #aviso{padding:0;margin-top:-16px}
+:where(html.t-home) .alerta{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border:1px solid var(--alerta-borda);border-left:4px solid var(--alerta);background:var(--alerta-fundo);border-radius:4px}
+:where(html.t-home) .alerta svg{flex:0 0 22px;width:22px;height:22px;margin-top:2px;fill:none;stroke:var(--alerta);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+:where(html.t-home) .alerta p{margin:0;font-size:15px;line-height:1.55}
+:where(html.t-home) .alerta strong{color:var(--alerta);font-weight:600}
+:where(html.t-home) .alerta a{color:inherit;font-weight:500;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--alerta)}
+@media (max-width:520px){:where(html.t-home) .alerta{padding:14px 14px}:where(html.t-home) .alerta p{font-size:14px}}
