@@ -229,7 +229,7 @@ html:where(.t-areas,.t-contato,.t-home,.t-quem)[data-hero="b"] .retrato{display:
 @media (max-width:720px){:where(html.t-area,html.t-areas,html.t-contato,html.t-home,html.t-informativo,html.t-informativos,html.t-quem) .wa-fixo{display:flex;position:fixed;right:16px;bottom:max(16px,env(safe-area-inset-bottom));width:54px;height:54px;border-radius:50%;background:#24493c;color:#fff;align-items:center;justify-content:center;box-shadow:0 10px 22px -10px rgba(0,0,0,.55);z-index:60}:where(html.t-area,html.t-areas,html.t-contato,html.t-home,html.t-informativo,html.t-informativos,html.t-quem) .wa-fixo svg{width:24px;height:24px;fill:currentColor}
 }
 :where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .hero,:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) section{min-height:0;display:block}
-html:where(.t-area,.t-erro,.t-informativo,.t-informativos,.t-privacidade){scroll-snap-type:none}
+html:where(.t-area,.t-areas,.t-contato,.t-erro,.t-informativo,.t-informativos,.t-privacidade,.t-quem){scroll-snap-type:none}
 :where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .page{padding-block:64px 72px}
 :where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .page h1{font-size:clamp(30px,4.4vw,44px);max-width:24ch}
 :where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .meta{font-family:var(--display);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:18px}
