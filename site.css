@@ -410,3 +410,6 @@ nav .sub-panel a[aria-current="page"],.mnav a[aria-current="page"],.mnav .mareas
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .faixa-alerta{background:#8f1d14}}
 :root[data-theme="dark"] .faixa-alerta{background:#8f1d14}
 @media print{.faixa-alerta{display:none}}
+/* Celular: e-mails quebram a linha quando não cabem; links do rodapé e da faixa com área de toque maior (sem mudar a aparência) */
+a[href^="mailto:"]{overflow-wrap:anywhere}
+footer a,.faixa-alerta a{padding-block:6px}
