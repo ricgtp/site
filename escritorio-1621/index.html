@@ -99,6 +99,7 @@ h1 b{font-weight:600}
     <span>Passagem <b>0,82</b></span>
     <span>Posto 3 com mesa inteira de <b>1,40</b></span>
     <span>Bancada de apoio <b>0,60 × 0,45</b> junto à copa</span>
+    <span>Ripado atrás do posto 3 <b>cobrindo a porta</b></span>
     <span>Fios pela <b>junção das mesas</b></span>
   </div>
   <p class="note">Medidas da planta de 03/11/2026, em escala real. A posição do vidro interno é estimada e precisa ser conferida na trena. Móveis, cores, quadros e objetos são ilustrativos.</p>
@@ -384,7 +385,7 @@ const fillIn = new THREE.PointLight('#ffeedd', 1.6, 0, 2); fillIn.position.set(2
 /* ---------- acabamentos ---------- */
 const STYLES = [
   { id: 'nogueira', name: 'Nogueira e verde',
-    text: 'A cara do escritório: nogueira, verde-escuro e latão. O painel ripado atrás das cadeiras esconde os fios, que descem até a junção das mesas.',
+    text: 'A cara do escritório: nogueira, verde-escuro e latão. O painel ripado atrás das cadeiras esconde os fios, que descem até a junção das mesas, e atrás do posto 3 cobre a porta da outra sala.',
     items: ['Tampo de nogueira, pés pretos', 'Ripado de nogueira sobre verde', 'Cadeiras de couro preto', 'Luminárias de latão'],
     sw: ['#5d3b25', '#1e3b30', '#c9a45c', '#151515'],
     top: '#5f3c25', legs: '#141414', legType: 'frame', legMetal: 0.3, modesty: '#4e3120', chair: '#151515', chairFrame: '#262626', chairMetal: '#1b1b1b',
@@ -573,6 +574,17 @@ function buildFurniture(S){
     frame(A1 + DESK_W / 2, 1.62, 0.0, w, h, 0, t, S, furn, S.art === 'diploma' ? '#b8954a' : '#d9c3a0');
     frame(A2 + DESK_W / 2, 1.62, 0.0, w, h, 0, S.art === 'diploma' ? diplomaTex() : artTex([S.artPal[0], S.artPal[2], S.artPal[1], S.artPal[3]]), S, furn, S.art === 'diploma' ? '#b8954a' : '#d9c3a0');
   }
+  // ripado atrás do posto 3, cobrindo a porta da outra sala
+  {
+    const rc = S.ripado || (S.id === 'carvalho' ? '#9a6b45' : S.cred);
+    B(0, 0, ND - 0.012, NW, H, ND, std(shade(S.north, -0.02), {roughness: 0.9}), {parent: furn});
+    const n = Math.floor((NW - 0.02) / 0.058);
+    const im = new THREE.InstancedMesh(box1, new THREE.MeshStandardMaterial({map: woodTex(rc, {contrast: 0.07}), roughness: 0.6, envMapIntensity: ENV}), n);
+    const m4 = new THREE.Matrix4();
+    const off = (NW - (n - 1) * 0.058 - 0.035) / 2;
+    for (let i = 0; i < n; i++){ m4.compose(new THREE.Vector3(off + i * 0.058 + 0.0175, H / 2, ND - 0.024), new THREE.Quaternion(), new THREE.Vector3(0.035, H, 0.024)); im.setMatrixAt(i, m4); }
+    im.castShadow = true; im.receiveShadow = true; furn.add(im);
+  }
   // mesas e cadeiras
   desk(A1, A2, CAD, CAD + DESK_D, true, S, furn);
   desk(A2, A3, CAD, CAD + DESK_D, true, S, furn);
@@ -629,8 +641,6 @@ function buildFurniture(S){
       rug.rotation.x = -Math.PI / 2; rug.position.set(1.15, 0.006, 1.55); rug.receiveShadow = true; furn.add(rug);
     }
   }
-  // quadro atrás do posto 3
-  frame(B0 + DESK3_W / 2, 1.58, ND, 0.62, 0.48, Math.PI, S.art === 'diploma' ? diplomaTex() : artTex([S.artPal[1], S.artPal[0], S.artPal[3], S.artPal[2]]), S, furn, S.art === 'diploma' ? '#b8954a' : (S.id === 'carvalho' ? '#d9c3a0' : '#1a1a1a'));
   // planta no canto da sacada
   plant(5.12, 0.38, 1.0, S, furn);
   furn.traverse(o => { if (o.material && o.material.envMapIntensity !== undefined && o.material.envMapIntensity === 1) o.material.envMapIntensity = ENV; });
