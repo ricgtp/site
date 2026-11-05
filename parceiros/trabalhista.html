@@ -46,6 +46,14 @@
 .fale .val a:hover,.fale .val a:focus-visible{border-color:var(--accent)}
 .fale .obs{margin-top:4px;font-size:14px;color:var(--muted)}
 @media (max-width:640px){.parc{grid-template-columns:1fr}.parc>div:first-child{max-width:320px}}
+.parc{align-items:stretch}
+.parc>div:first-child{display:flex;flex-direction:column}
+.parc>div:first-child .foto{flex:1 1 auto;aspect-ratio:auto;min-height:320px}
+.parc>div:first-child .foto img{object-position:50% 25%}
+.parc>div:last-child{display:flex;flex-direction:column}
+.parc>div:last-child>.aviso{margin-top:auto;padding-top:18px}
+.fale{margin-top:16px}
+@media (max-width:640px){.parc>div:first-child .foto{flex:none;aspect-ratio:4/5;min-height:0}.parc>div:last-child>.aviso{margin-top:0}}
 </style>
 
 
