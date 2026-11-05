@@ -38,6 +38,13 @@
 .parc .botoes{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 .parc p{margin-top:12px}
 .aviso{margin-top:28px;font-size:13px;color:var(--muted);max-width:65ch}
+.fale{margin-top:20px;border-top:1px solid var(--rule);display:grid;gap:0}
+.fale>div{padding:14px 0;border-bottom:1px solid var(--rule)}
+.fale .rot{font-family:var(--display);font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.fale .val{margin-top:4px;font-size:17px}
+.fale .val a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.fale .val a:hover,.fale .val a:focus-visible{border-color:var(--accent)}
+.fale .obs{margin-top:4px;font-size:14px;color:var(--muted)}
 @media (max-width:640px){.parc{grid-template-columns:1fr}.parc>div:first-child{max-width:320px}}
 </style>
 
@@ -91,7 +98,12 @@
 <div class="parc">
 <div><div class="foto"><img src="/parceiros/heloise.jpg" alt="Heloise dos Santos Azevedo no escritório" width="800" height="1000" loading="lazy"></div><div class="logo"><img src="/parceiros/heloise-logo.png" alt="Heloise Azevedo, advocacia previdenciária" width="348" height="87" loading="lazy"></div></div>
 <div><h3>Heloise dos Santos Azevedo</h3><div class="oab">OAB/SP nº 364.497</div>
-<p>Atende no mesmo endereço do meu escritório, na Av. Conselheiro Nébias, 754, no Boqueirão, em Santos. Para falar com ela, use o site ou o Instagram.</p>
+<p>Atende no mesmo endereço do meu escritório, na Av. Conselheiro Nébias, 754, no Boqueirão, em Santos.</p>
+<div class="fale">
+<div><div class="rot">WhatsApp</div><div class="val"><a href="https://wa.me/5513981936494" target="_blank" rel="noopener">+55&nbsp;13&nbsp;98193&#8209;6494</a></div></div>
+<div><div class="rot">E&#8209;mail</div><div class="val"><a href="mailto:escritorio@heloiseazevedo.com.br">escritorio@heloiseazevedo.com.br</a></div></div>
+<div><div class="rot">Horário</div><div class="val">Segunda a sexta, das 9h às 18h</div><div class="obs">Atendimento somente com hora marcada, presencial ou online.</div></div>
+</div>
 <p class="botoes"><a class="btn primary" href="https://heloiseazevedo.com.br/" target="_blank" rel="noopener">Visitar o site</a> <a class="btn" href="https://www.instagram.com/sigaahelo/" target="_blank" rel="noopener">Instagram @sigaahelo</a></p></div>
 </div>
 <p class="aviso">Cada advogado conduz os próprios casos, com contrato e responsabilidade próprios.</p>
