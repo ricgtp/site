@@ -40,6 +40,13 @@
 #parceiros .colega p.temas{margin-top:12px;font-size:15px;line-height:1.6}
 #parceiros .colega .links{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:14px}
 #parceiros .colega .links a{color:var(--accent);border-bottom:1px solid var(--accent);font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+#parceiros .cartao{display:block;color:inherit;text-decoration:none;border:0}
+#parceiros .cartao .foto img{transition:transform .35s ease}
+#parceiros .cartao:hover .foto img,#parceiros .cartao:focus-visible .foto img{transform:scale(1.03)}
+#parceiros .cartao:hover h2,#parceiros .cartao:focus-visible h2{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:6px;text-decoration-thickness:1.5px}
+#parceiros .cartao:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+#parceiros .botoes{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+@media (prefers-reduced-motion:reduce){#parceiros .cartao .foto img{transition:none}}
 #parceiros .aviso{margin-top:36px;font-size:13px;color:var(--muted);max-width:65ch}
 @media (max-width:720px){#parceiros .colega{scroll-margin-top:84px}
 #parceiros .grade{grid-template-columns:1fr;gap:44px}}
@@ -85,21 +92,21 @@
       <div class="grade">
         <article class="colega" id="previdenciario">
           <span class="area-nome">Previdenciário</span>
-          <div class="foto"><img src="/parceiros/heloise.jpg" alt="Heloise dos Santos Azevedo no escritório" width="800" height="1000" loading="lazy"></div>
+          <a class="cartao" href="https://heloiseazevedo.com.br/" target="_blank" rel="noopener" aria-label="Abrir o site de Heloise dos Santos Azevedo"><div class="foto"><img src="/parceiros/heloise.jpg" alt="Heloise dos Santos Azevedo no escritório" width="800" height="1000" loading="lazy"></div>
           <div class="logo"><img src="/parceiros/heloise-logo.png" alt="Heloise Azevedo, advocacia previdenciária" width="348" height="87" loading="lazy"></div>
-          <h2>Heloise dos Santos Azevedo</h2>
+          <h2>Heloise dos Santos Azevedo</h2></a>
           <div class="oab">OAB/SP nº 364.497</div>
           <p class="temas">Aposentadorias, benefícios por incapacidade, pensão por morte, revisões de benefício, recursos contra negativas do INSS e planejamento previdenciário.</p>
-          <div class="links"><a href="https://heloiseazevedo.com.br/" target="_blank" rel="noopener">Site</a><a href="https://www.instagram.com/sigaahelo/" target="_blank" rel="noopener">Instagram @sigaahelo</a></div>
+          <div class="botoes"><a class="btn primary" href="https://heloiseazevedo.com.br/" target="_blank" rel="noopener">Visitar o site</a><a class="btn" href="https://www.instagram.com/sigaahelo/" target="_blank" rel="noopener">Instagram @sigaahelo</a></div>
         </article>
         <article class="colega" id="trabalhista">
           <span class="area-nome">Trabalhista</span>
-          <div class="foto"><img src="/parceiros/daniel.jpg" alt="Daniel Ferreira de Oliveira no escritório" width="800" height="1000" loading="lazy"></div>
+          <a class="cartao" href="https://www.danielferreira.adv.br/" target="_blank" rel="noopener" aria-label="Abrir o site de Daniel Ferreira de Oliveira"><div class="foto"><img src="/parceiros/daniel.jpg" alt="Daniel Ferreira de Oliveira no escritório" width="800" height="1000" loading="lazy"></div>
           <div class="logo"><img src="/parceiros/daniel-logo.png" alt="Daniel Ferreira de Oliveira, advogado" width="615" height="117" loading="lazy"></div>
-          <h2>Daniel Ferreira de Oliveira</h2>
+          <h2>Daniel Ferreira de Oliveira</h2></a>
           <div class="oab">OAB/SP nº 425.156</div>
           <p class="temas">Horas extras, adicionais de insalubridade e periculosidade, acidente e doença do trabalho, justa causa, rescisão indireta e assédio no trabalho.</p>
-          <div class="links"><a href="https://www.danielferreira.adv.br/" target="_blank" rel="noopener">Site</a><a href="https://www.instagram.com/dr_daniel_ferreira/" target="_blank" rel="noopener">Instagram @dr_daniel_ferreira</a></div>
+          <div class="botoes"><a class="btn primary" href="https://www.danielferreira.adv.br/" target="_blank" rel="noopener">Visitar o site</a><a class="btn" href="https://www.instagram.com/dr_daniel_ferreira/" target="_blank" rel="noopener">Instagram @dr_daniel_ferreira</a></div>
         </article>
       </div>
       <p class="aviso">Cada advogado conduz os próprios casos, com contrato e responsabilidade próprios.</p>
