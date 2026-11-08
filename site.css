@@ -565,3 +565,13 @@ footer .oab{font-weight:700;font-size:13.5px;letter-spacing:0}
 :where(html.t-areas,html.t-home) .area h2,:where(html.t-area,html.t-contato,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade,html.t-quem) .area h3{font-size:20px}
 @media (max-width:364px){ nav a.cta,.menu-btn{font-size:12.5px} }
 html .hero .eyebrow,html:where(.t-home)[data-hero="b"] .hero .eyebrow{letter-spacing:.1em}
+
+/* Rótulos sem caixa alta (08/11/2026): no monitor do Ricardo a caixa alta pequena continuava miúda; viram subtítulos
+   em Verdana negrito 15 px, em grafite; o verde fica só no detalhe (tema dos informativos, números 01 a 04) */
+.eyebrow,.contact .label,.bloco .sub,:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .fonte b,
+html body #parceiros .colega .area-nome,html body .fale .rot{text-transform:none;letter-spacing:0;font-family:var(--body);font-weight:700;font-size:15px;color:var(--fg)}
+html .hero .eyebrow,html:where(.t-home)[data-hero="b"] .hero .eyebrow{letter-spacing:0}
+:where(html.t-areas) .eyebrow,:where(html.t-quem) .bloco .sub{color:var(--fg)}
+:where(html.t-informativo,html.t-informativos) .tag{color:var(--accent)}
+:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .meta{text-transform:none;letter-spacing:0;font-size:14px;font-weight:400}
+.principles li::before,:where(html.t-home) .principles li::before,:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .principles li::before{font-size:14px;letter-spacing:.04em}
