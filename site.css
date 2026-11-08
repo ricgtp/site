@@ -540,3 +540,28 @@ html body #parceiros .colega .area-nome,html body .fale .rot{font-weight:600;fon
 .top .mnav a[aria-current="page"],.top .mnav .mareas a[aria-current="page"]{color:#ffffff;text-decoration-color:#dad5d1}
 .top a:focus-visible,.top .menu-btn:focus-visible{outline-color:#ffffff}
 .top a[style*="border-top"]{border-top-color:#4a4445!important}
+
+/* Rótulos pequenos em caixa alta em Verdana (08/11/2026): no monitor do Ricardo a Montserrat pequena perde as diagonais
+   mesmo em peso 600; a Verdana foi desenhada para tela e fica nítida nesse tamanho */
+.eyebrow,:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .meta,.contact .label,.bloco .sub,
+:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .fonte b,
+.principles li::before,:where(html.t-home) .principles li::before,:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .principles li::before,
+html body #parceiros .colega .area-nome,html body .fale .rot{font-family:var(--body);font-weight:700;letter-spacing:.1em}
+.eyebrow,.contact .label,.bloco .sub,html body #parceiros .colega .area-nome,html body .fale .rot{font-size:13px}
+:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .meta{font-size:13px;font-weight:400;letter-spacing:.06em}
+
+/* Montserrat só em títulos de 20 px para cima; menu, botões, links e textos curtos em Verdana, nítida no Windows (08/11/2026) */
+nav a,.mnav a,.btn,.link,.copy,.skip,.menu-btn,nav .sub-panel a,.principles li,:where(html.t-home) .principles li,
+footer .oab,.rev .quando,.rev .ini,.retrato figcaption,html body #parceiros .colega .links a{font-family:var(--body)}
+nav a,nav .sub-panel a{font-size:14px;font-weight:400;letter-spacing:0}
+.top nav a.sec[aria-current],.top nav a.cta{font-weight:700}
+.btn,.link{font-size:14px;font-weight:700;letter-spacing:0}
+.menu-btn{font-size:14px;font-weight:700;letter-spacing:0}
+.mnav a{font-size:16px;font-weight:400;letter-spacing:0}
+.principles li,:where(html.t-home) .principles li{font-weight:400;font-size:15.5px;line-height:1.55}
+footer .oab{font-weight:700;font-size:13.5px;letter-spacing:0}
+.rev .quando,.retrato figcaption{font-weight:400;letter-spacing:0}
+.rev .ini{font-weight:700;font-size:12px}
+:where(html.t-areas,html.t-home) .area h2,:where(html.t-area,html.t-contato,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade,html.t-quem) .area h3{font-size:20px}
+@media (max-width:364px){ nav a.cta,.menu-btn{font-size:12.5px} }
+html .hero .eyebrow,html:where(.t-home)[data-hero="b"] .hero .eyebrow{letter-spacing:.1em}
