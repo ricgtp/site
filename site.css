@@ -518,3 +518,25 @@ a.area,.area,.rev,:where(html.t-informativos) .card,nav .sub-panel .box{backgrou
 .principles li::before,:where(html.t-home) .principles li::before,:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .principles li::before{font-weight:600;letter-spacing:.14em}
 .principles li::before,:where(html.t-home) .principles li::before{font-size:13px}
 html body #parceiros .colega .area-nome,html body .fale .rot{font-weight:600;font-size:13px;letter-spacing:.14em}
+
+/* Topo em grafite, como o menu do Sistema Godoy (08/11/2026): faixa escura de ponta a ponta com logo e menu claros; o resto da página continua claro */
+.top{background:#2a2627;border-bottom:0;margin-inline:-16px;padding-inline:16px;color:#ffffff}
+.faixa-alerta{margin-inline:-16px}
+.top .brand{color:#ffffff}
+.top nav a{color:#dad5d1}
+.top nav a:hover,.top nav a:focus-visible,.top nav a.sec[aria-current],.top nav a.sec:hover{color:#ffffff}
+.top nav a.sec{background-image:linear-gradient(#dad5d1,#dad5d1)}
+.top nav a.cta{color:#ffffff;border-color:#dad5d1}
+.top nav a.cta:hover{background:#ffffff;color:#2a2627;border-color:#ffffff}
+.top nav .sub-panel .box{background:#2a2627;border-color:#4a4445;box-shadow:0 14px 30px rgba(0,0,0,.35)}
+.top nav .sub-panel a{color:#dad5d1}
+.top nav .sub-panel a:hover,.top nav .sub-panel a:focus-visible,.top nav .sub-panel a[aria-current="page"]{color:#ffffff;text-decoration-color:#dad5d1}
+.top .menu-btn{color:#ffffff;border-color:#6a6364}
+.top .menu-btn:hover{border-color:#ffffff}
+.top .mnav{border-top-color:#4a4445}
+.top .mnav a{color:#ffffff;border-bottom-color:#4a4445}
+.top .mnav .mareas{border-bottom-color:#4a4445}
+.top .mnav .mareas a{color:#dad5d1}
+.top .mnav a[aria-current="page"],.top .mnav .mareas a[aria-current="page"]{color:#ffffff;text-decoration-color:#dad5d1}
+.top a:focus-visible,.top .menu-btn:focus-visible{outline-color:#ffffff}
+.top a[style*="border-top"]{border-top-color:#4a4445!important}
