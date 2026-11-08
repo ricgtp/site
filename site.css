@@ -502,3 +502,8 @@ h1,h2,h3{font-weight:400}
 
 /* Site sempre claro (08/11/2026) */
 :root{color-scheme:light}
+
+/* Fundo gelo quente (08/11/2026): tira o brilho do branco puro; cartões, avaliações e painéis continuam brancos */
+:root:where(.t-areas,.t-contato,.t-home,.t-informativos,.t-quem,.t-area,.t-erro,.t-informativo,.t-privacidade){--bg:#f7f6f4;--wm:#efedea;--btn-hover:#efedea;--card-hover:#ffffff;--bloco:#ffffff}
+a.area,.area,.rev,:where(html.t-informativos) .card,nav .sub-panel .box{background:var(--bloco,#fff)}
+:where(html.t-area,html.t-erro,html.t-informativo,html.t-privacidade) .area,:where(html.t-area,html.t-erro,html.t-informativo,html.t-privacidade) .card{background:transparent}
