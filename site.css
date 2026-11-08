@@ -575,3 +575,7 @@ html .hero .eyebrow,html:where(.t-home)[data-hero="b"] .hero .eyebrow{letter-spa
 :where(html.t-informativo,html.t-informativos) .tag{color:var(--accent)}
 :where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .meta{text-transform:none;letter-spacing:0;font-size:14px;font-weight:400}
 .principles li::before,:where(html.t-home) .principles li::before,:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .principles li::before{font-size:14px;letter-spacing:.04em}
+
+/* Quem sou: linhas discretas de formação e associação, no fim do texto (08/11/2026) */
+:where(html.t-quem) .bloco p.assoc{font-size:15px;color:var(--muted)}
+:where(html.t-quem) .bloco p.assoc+p.assoc{margin-top:8px}
