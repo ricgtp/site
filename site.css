@@ -414,3 +414,95 @@ nav .sub-panel a[aria-current="page"],.mnav a[aria-current="page"],.mnav .mareas
 /* Celular: e-mails quebram a linha quando não cabem; links do rodapé e da faixa com área de toque maior (sem mudar a aparência) */
 a[href^="mailto:"]{overflow-wrap:anywhere}
 footer a,.faixa-alerta a{padding-block:6px}
+
+/* ===== Leitura confortável (08/11/2026) =====
+   Mesma ideia do "Visual claro" do Sistema Godoy: cores do logo e da pasta (grafite #2a2627, prata #dad5d1, branco),
+   verde só como detalhe, textos de apoio maiores e com cinza mais firme, caixa alta só nos rótulos pequenos
+   e informativos com prioridade na leitura. Continua seguindo o claro ou escuro do aparelho.
+   Este bloco fica no fim do arquivo e sobrepõe as regras anteriores; cores novas entram nas variáveis. */
+:root:where(.t-areas,.t-contato,.t-home,.t-informativos,.t-quem,.t-area,.t-erro,.t-informativo,.t-privacidade){
+  --bg:#ffffff; --fg:#2a2627; --muted:#4d4748; --rule:#dad5d1; --rule-strong:#2a2627; --wm:#f4f2f0;
+  --btn-hover:#f5f4f2; --card-hover:#ffffff; --accent:#2f6552;
+  --principal:#2a2627; --principal-txt:#ffffff;
+  --card-shadow:0 20px 32px -20px rgba(42,38,39,.45);
+}
+@media (prefers-color-scheme:dark){
+  :root:where(.t-areas,.t-contato,.t-home,.t-informativos,.t-quem,.t-area,.t-erro,.t-informativo,.t-privacidade):not([data-theme="light"]){
+    --bg:#2a2627; --fg:#ffffff; --muted:#dad5d1; --rule:#4a4445; --rule-strong:#dad5d1; --wm:#2f2b2c;
+    --btn-hover:#353031; --card-hover:#322e2f; --accent:#8fc4ae;
+    --principal:#dad5d1; --principal-txt:#2a2627;
+    --card-shadow:0 0 0 1px rgba(218,213,209,.35),0 24px 40px -18px rgba(0,0,0,.6);
+  }
+}
+:root:where(.t-areas,.t-contato,.t-home,.t-informativos,.t-quem,.t-area,.t-erro,.t-informativo,.t-privacidade)[data-theme="dark"]{
+  --bg:#2a2627; --fg:#ffffff; --muted:#dad5d1; --rule:#4a4445; --rule-strong:#dad5d1; --wm:#2f2b2c;
+  --btn-hover:#353031; --card-hover:#322e2f; --accent:#8fc4ae;
+  --principal:#dad5d1; --principal-txt:#2a2627;
+  --card-shadow:0 0 0 1px rgba(218,213,209,.35),0 24px 40px -18px rgba(0,0,0,.6);
+}
+
+/* Verde só como detalhe: botão principal e atalho do WhatsApp nas cores do logo; bordas de passagem do mouse em grafite ou prata */
+.btn.primary,:root[data-theme="dark"] .btn.primary{background:var(--principal);border-color:var(--principal);color:var(--principal-txt)}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .btn.primary{background:var(--principal);border-color:var(--principal);color:var(--principal-txt)} }
+@media (max-width:720px){
+  :where(html.t-area,html.t-areas,html.t-contato,html.t-home,html.t-informativo,html.t-informativos,html.t-quem) .wa-fixo,
+  :root:where(.t-area,.t-areas,.t-contato,.t-home,.t-informativo,.t-informativos,.t-quem)[data-theme="dark"] .wa-fixo{background:var(--principal);color:var(--principal-txt)}
+}
+@media (max-width:720px) and (prefers-color-scheme:dark){ :root:where(.t-area,.t-areas,.t-contato,.t-home,.t-informativo,.t-informativos,.t-quem):not([data-theme="light"]) .wa-fixo{background:var(--principal);color:var(--principal-txt)} }
+@media (hover:hover){ a.area:hover,a.area:focus-visible,.card:hover,.card:focus-visible,.rev:hover,html:where(.t-areas) a.area:hover,html:where(.t-areas) a.area:focus-visible{border-color:var(--rule-strong)} html:where(.t-areas) a.area:hover h3,html:where(.t-areas) a.area:focus-visible h3{color:inherit} }
+:where(html.t-informativos) .card .link,:where(html.t-informativos) .card .link:hover,:where(html.t-contato) .contact .link,:where(html.t-contato) .contact .link:hover{color:var(--fg);border-bottom-color:var(--accent)}
+.link{border-bottom-color:var(--accent)}
+.link:hover{color:var(--fg);border-bottom-color:var(--fg)}
+
+/* Menos caixa alta: menu, botões, links e avisos em texto normal; caixa alta fica só nos rótulos pequenos, com espaçamento menor */
+nav a,.mnav a,.btn,.link,.copy,.skip,.menu-btn,nav .sub-panel a{text-transform:none;letter-spacing:.01em}
+nav a{font-size:14.5px;font-weight:500}
+nav .sub-panel a{font-size:14.5px}
+.mnav a{font-size:16px}
+.mnav .mareas a{font-size:15px;letter-spacing:0}
+.btn,.link{font-size:14.5px}
+.menu-btn{font-size:14px}
+.copy{font-size:13px}
+@media (max-width:364px){ nav a.cta,.menu-btn{font-size:13px;letter-spacing:0} }
+html body #parceiros .colega .links a{text-transform:none;letter-spacing:.01em;font-size:14.5px}
+.eyebrow{letter-spacing:.2em;font-size:13px}
+.contact .label,.bloco .sub,:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .fonte b{letter-spacing:.14em}
+:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .meta{letter-spacing:.08em}
+
+/* Textos de apoio maiores e com cinza firme */
+.hero p{font-size:18px;color:var(--muted)}
+html .hero .eyebrow,html:where(.t-home)[data-hero="b"] .hero .eyebrow{letter-spacing:.2em}
+.lead{font-size:18px;color:var(--muted)}
+.area p{font-size:16px}
+:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .rev blockquote{font-size:16px}
+:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .rev .quando,.retrato figcaption{font-size:14px;letter-spacing:.02em}
+:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .aval-nota{font-size:14.5px}
+.principles li,:where(html.t-home) .principles li{font-size:16px}
+.contact .note{font-size:15px}
+footer{font-size:14.5px;color:var(--muted)}
+footer .oab{font-size:13.5px}
+.faixa-alerta{font-size:14px}
+html body #parceiros .aviso,html body .art .parc p.aviso{font-size:14px}
+:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .fonte,:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .assina{font-size:15px}
+:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .meta{font-size:13.5px}
+:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .card p{font-size:16px}
+
+/* Títulos um pouco mais firmes (Montserrat 400 em vez de 300) */
+h1,h2,h3{font-weight:400}
+
+/* Informativos: prioridade na leitura */
+:where(html.t-informativo) .wm{display:none}
+:where(html.t-informativo) .page h1{font-size:clamp(30px,4.2vw,42px);max-width:26ch;line-height:1.18}
+:where(html.t-informativo) .faixa{aspect-ratio:6/1;margin-bottom:28px}
+:where(html.t-informativo) .art{max-width:68ch;margin-top:28px}
+:where(html.t-informativo) .art p,:where(html.t-informativo) .art li{font-size:18px;line-height:1.75}
+:where(html.t-informativo) .art p{margin-top:20px}
+:where(html.t-informativo) .art .lead{font-size:20px;line-height:1.65;color:var(--fg)}
+:where(html.t-informativo) .art h2{font-size:clamp(22px,2.8vw,27px);font-weight:500;margin-top:46px;padding-top:24px}
+:where(html.t-informativo) .art li{margin-top:10px}
+:where(html.t-informativo) .art strong,:where(html.t-informativo) .art b{font-weight:700}
+:where(html.t-informativo) .art .fale p{font-size:17px}
+@media (max-width:720px){
+  :where(html.t-informativo) .art p,:where(html.t-informativo) .art li{font-size:17px;line-height:1.7}
+  :where(html.t-informativo) .art .lead{font-size:18.5px}
+}
