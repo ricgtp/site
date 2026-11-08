@@ -507,3 +507,14 @@ h1,h2,h3{font-weight:400}
 :root:where(.t-areas,.t-contato,.t-home,.t-informativos,.t-quem,.t-area,.t-erro,.t-informativo,.t-privacidade){--bg:#f7f6f4;--wm:#efedea;--btn-hover:#efedea;--card-hover:#ffffff;--bloco:#ffffff}
 a.area,.area,.rev,:where(html.t-informativos) .card,nav .sub-panel .box{background:var(--bloco,#fff)}
 :where(html.t-area,html.t-erro,html.t-informativo,html.t-privacidade) .area,:where(html.t-area,html.t-erro,html.t-informativo,html.t-privacidade) .card{background:transparent}
+
+/* Nitidez no Windows (08/11/2026): a Montserrat fina em letra pequena falha em alguns monitores (traços somem).
+   Textos em Montserrat abaixo de 20 px passam a peso 500; rótulos pequenos em caixa alta, peso 600 */
+.principles li,:where(html.t-home) .principles li,footer .oab,.rev .quando,.rev .ini,.retrato figcaption,
+:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .card h2,
+:where(html.t-areas,html.t-home) .area h2,:where(html.t-area,html.t-contato,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade,html.t-quem) .area h3{font-weight:500}
+.eyebrow,:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .meta,.contact .label,.bloco .sub,
+:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .fonte b,
+.principles li::before,:where(html.t-home) .principles li::before,:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .principles li::before{font-weight:600;letter-spacing:.14em}
+.principles li::before,:where(html.t-home) .principles li::before{font-size:13px}
+html body #parceiros .colega .area-nome,html body .fale .rot{font-weight:600;font-size:13px;letter-spacing:.14em}
