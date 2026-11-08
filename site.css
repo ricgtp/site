@@ -4,20 +4,20 @@
    t-home (início), t-quem (Quem sou), t-contato, t-areas (lista de áreas), t-area (página de área),
    t-informativos (lista), t-informativo (artigo), t-privacidade, t-erro (404).
    O :where() não altera a especificidade, então a ordem e o peso das regras são os mesmos de antes da unificação. */
-:root:where(.t-areas,.t-contato,.t-home,.t-quem){color-scheme:light dark}
+:root:where(.t-areas,.t-contato,.t-home,.t-quem){color-scheme:light}
 :where(html.t-areas,html.t-contato,html.t-home,html.t-quem) img{max-width:100%}
 :where(html.t-areas,html.t-contato,html.t-home,html.t-quem) footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 @media (min-width:721px){:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .bloco p,:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) #escritorio .grid2>div:last-child>p{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-justify:inter-word}
 }
 :where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .faixa,:where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .area .foto img{filter:grayscale(1) brightness(var(--img-dim,1))}
-@media (prefers-color-scheme:dark){:root:where(.t-areas,.t-contato,.t-home,.t-quem):not([data-theme="light"]){--img-dim:.86} }
+
 :root:where(.t-areas,.t-contato,.t-home,.t-quem)[data-theme="dark"]{--img-dim:.86}
 :where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .principles{counter-reset:p}
 :where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .principles li{counter-increment:p;padding:22px 0;font-size:17px;line-height:1.5}
 :where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .principles li::before{content:counter(p,decimal-leading-zero);display:block;font-family:var(--display);font-weight:300;font-size:12px;letter-spacing:.24em;color:var(--muted);margin-bottom:8px}
 :where(html.t-areas,html.t-contato,html.t-home,html.t-quem) .mnav a[aria-current="true"]{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
 :root:where(.t-contato){--accent:#24493c}
-@media (prefers-color-scheme:dark){:root:where(.t-contato):not([data-theme="light"]){--accent:#8fc4ae} }
+
 :root:where(.t-contato)[data-theme="dark"]{--accent:#8fc4ae}
 :where(html.t-contato) .contact .label{display:flex;align-items:center;gap:10px}
 :where(html.t-contato) .contact .label .ico{display:inline-flex;color:var(--accent)}
@@ -39,10 +39,7 @@
   --display:"Montserrat","Helvetica Neue",Arial,sans-serif;
   --body:Verdana,Geneva,"DejaVu Sans",sans-serif;
 }
-@media (prefers-color-scheme: dark){:root:where(.t-areas,.t-contato,.t-home,.t-informativos,.t-quem):not([data-theme="light"]){
-    --bg:#161616; --fg:#ececec; --muted:#a5a5a5; --rule:#444444; --rule-strong:#ececec; --wm:#1c1c1c; --btn-hover:#222222; --card-hover:#222222; --card-shadow:0 0 0 1px rgba(255,255,255,.25),0 24px 40px -18px rgba(255,255,255,.22); color-scheme:dark;
-  }
-}
+
 :root:where(.t-areas,.t-contato,.t-home,.t-informativos,.t-quem)[data-theme="dark"]{
   --bg:#161616; --fg:#ececec; --muted:#a5a5a5; --rule:#444444; --rule-strong:#ececec; --wm:#1c1c1c; --btn-hover:#222222; --card-hover:#222222; --card-shadow:0 0 0 1px rgba(255,255,255,.25),0 24px 40px -18px rgba(255,255,255,.22); color-scheme:dark;
 }
@@ -57,10 +54,7 @@
   --display:"Montserrat","Helvetica Neue",Arial,sans-serif;
   --body:Verdana,Geneva,"DejaVu Sans",sans-serif;
 }
-@media (prefers-color-scheme: dark){:root:where(.t-area,.t-erro,.t-informativo,.t-privacidade):not([data-theme="light"]){
-    --bg:#161616; --fg:#ececec; --muted:#a5a5a5; --rule:#444444; --rule-strong:#ececec; --wm:#1c1c1c; --btn-hover:#222222; color-scheme:dark;
-  }
-}
+
 :root:where(.t-area,.t-erro,.t-informativo,.t-privacidade)[data-theme="dark"]{
   --bg:#161616; --fg:#ececec; --muted:#a5a5a5; --rule:#444444; --rule-strong:#ececec; --wm:#1c1c1c; --btn-hover:#222222; color-scheme:dark;
 }
@@ -100,7 +94,7 @@ main,footer{position:relative;z-index:1}
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
 .btn{font-family:var(--display);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--fg);border:1px solid var(--fg);padding:13px 20px;border-radius:2px;display:inline-flex;align-items:center;gap:10px;background:transparent;cursor:pointer;line-height:1}
 .btn.primary{background:#24493c;border-color:#24493c;color:#fff}
-@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .btn.primary{background:#2f6552;border-color:#2f6552} }
+
 :root[data-theme="dark"] .btn.primary{background:#2f6552;border-color:#2f6552}
 .btn.primary:hover{opacity:.88}
 @media (hover:hover){ .btn{transition:transform .28s ease,box-shadow .28s ease,opacity .28s ease,background-color .28s ease} .btn:hover,.btn:focus-visible{position:relative;z-index:2;transform:translateY(-6px) scale(1.02);opacity:1;box-shadow:var(--card-shadow,0 22px 34px -20px rgba(0,0,0,.45))} }
@@ -262,14 +256,14 @@ html:where(.t-area,.t-areas,.t-contato,.t-erro,.t-informativo,.t-informativos,.t
 @media (min-width:861px){:where(html.t-home) .areas.atalhos{grid-template-columns:repeat(2,minmax(0,1fr))} }
 :where(html.t-home) .areas.atalhos .area .corpo{align-self:flex-start}
 :root:where(.t-areas,.t-quem){--accent:#24493c}
-@media (prefers-color-scheme:dark){:root:where(.t-areas,.t-quem):not([data-theme="light"]){--accent:#8fc4ae} }
+
 :root:where(.t-areas,.t-quem)[data-theme="dark"]{--accent:#8fc4ae}
 :where(html.t-quem) .bloco .sub{color:var(--accent)}
 :where(html.t-quem) .principles li::before{color:var(--accent)}
 :where(html.t-areas) .eyebrow{color:var(--accent)}
 :where(html.t-areas) a.area h2::after{color:var(--accent)}
 @media (hover:hover){html:where(.t-areas) a.area:hover,html:where(.t-areas) a.area:focus-visible{border-color:var(--accent)}html:where(.t-areas) a.area:hover h3,html:where(.t-areas) a.area:focus-visible h3{color:var(--accent)} }
-@media (max-width:720px) and (prefers-color-scheme:dark){:root:where(.t-area,.t-areas,.t-contato,.t-home,.t-informativo,.t-informativos,.t-quem):not([data-theme="light"]) .wa-fixo{background:#2f6552} }
+
 @media (max-width:720px){:root:where(.t-area,.t-areas,.t-contato,.t-home,.t-informativo,.t-informativos,.t-quem)[data-theme="dark"] .wa-fixo{background:#2f6552} }
 :where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 @media (min-width:721px){:where(html.t-area,html.t-informativo,html.t-informativos,html.t-privacidade) .art p:not(.lead):not(.assina):not(.fonte):not(.meta),:where(html.t-area,html.t-informativo,html.t-informativos,html.t-privacidade) .art li{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-justify:inter-word}
@@ -286,10 +280,10 @@ html:where(.t-area,.t-areas,.t-contato,.t-erro,.t-informativo,.t-informativos,.t
 @media (min-width:721px){:where(html.t-area) .art ul.temas{columns:2;column-gap:40px;border-top:1px solid var(--rule)}:where(html.t-area) .art ul.temas li:first-child{padding-top:11px} }
 @media (max-width:720px){:where(html.t-area) .art ul.temas{border-top:1px solid var(--rule)} }
 :where(html.t-area,html.t-informativo) .faixa,:where(html.t-area,html.t-informativo) .area .foto img{filter:grayscale(1) brightness(var(--img-dim,1))}
-@media (prefers-color-scheme:dark){:root:where(.t-area,.t-informativo):not([data-theme="light"]){--img-dim:.86} }
+
 :root:where(.t-area,.t-informativo)[data-theme="dark"]{--img-dim:.86}
 :root:where(.t-informativo,.t-informativos){--accent:#24493c}
-@media (prefers-color-scheme:dark){:root:where(.t-informativo,.t-informativos):not([data-theme="light"]){--accent:#8fc4ae} }
+
 :root:where(.t-informativo,.t-informativos)[data-theme="dark"]{--accent:#8fc4ae}
 :where(html.t-informativo,html.t-informativos) .tag{color:var(--accent)}
 :where(html.t-informativos) .card.cf{display:flex;flex-direction:row;align-items:stretch;padding:0;overflow:hidden}
@@ -305,7 +299,7 @@ html:where(.t-area,.t-areas,.t-contato,.t-erro,.t-informativo,.t-informativos,.t
 .skip{position:absolute;left:16px;top:-200px;z-index:20;background:var(--bg);color:var(--fg);border:1px solid var(--fg);padding:10px 14px;border-radius:2px;font-family:var(--display);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
 .skip:focus{top:16px;outline:2px solid var(--fg);outline-offset:3px}
 :root:where(.t-area,.t-erro,.t-home,.t-privacidade){--accent:#24493c}
-@media (prefers-color-scheme:dark){:root:where(.t-area,.t-erro,.t-home,.t-privacidade):not([data-theme="light"]){--accent:#8fc4ae} }
+
 :root:where(.t-area,.t-erro,.t-home,.t-privacidade)[data-theme="dark"]{--accent:#8fc4ae}
 :where(html.t-home) #como{min-height:0;padding-block:56px}
 :where(html.t-home) #como .eyebrow{margin-bottom:0}
@@ -318,12 +312,12 @@ html:where(.t-area,.t-areas,.t-contato,.t-erro,.t-informativo,.t-informativos,.t
 h1 .pt{color:var(--accent)}
 /* Botão verde dentro do bloco de avaliações (Avaliar no Google): as regras genéricas de .aval-nav .btn deixavam o fundo transparente. */
 .aval-nav .btn.primary,.aval-nav .btn.primary:hover,.aval-nav .btn.primary:focus-visible{background:#24493c;border-color:#24493c;color:#fff}
-@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .aval-nav .btn.primary,:root:not([data-theme="light"]) .aval-nav .btn.primary:hover,:root:not([data-theme="light"]) .aval-nav .btn.primary:focus-visible{background:#2f6552;border-color:#2f6552;color:#fff} }
+
 :root[data-theme="dark"] .aval-nav .btn.primary,:root[data-theme="dark"] .aval-nav .btn.primary:hover,:root[data-theme="dark"] .aval-nav .btn.primary:focus-visible{background:#2f6552;border-color:#2f6552;color:#fff}
 .aval-nav .btn.primary:hover{opacity:.88}
 /* Legibilidade: pesos e tamanhos um pouco maiores, cores secundárias mais firmes. */
 :root{--muted:#4f4f4f}
-@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){--muted:#b5b5b5} }
+
 :root[data-theme="dark"]{--muted:#b5b5b5}
 h1,h2,h3{font-weight:400}
 .principles li::before{font-weight:400}
@@ -360,7 +354,7 @@ nav .sub-panel a:hover,nav .sub-panel a:focus-visible{color:var(--fg);text-decor
 nav .sub-panel a[aria-current="page"]{color:var(--fg);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
 nav .sub:hover .sub-panel,nav .sub:focus-within .sub-panel{display:block}
 @media (hover:none){ nav .sub:hover .sub-panel{display:none} nav .sub:focus-within .sub-panel{display:block} }
-@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) nav .sub-panel .box{box-shadow:0 10px 30px rgba(0,0,0,.45)} }
+
 /* Menu do celular: botão Menu no cabeçalho e painel abaixo dele */
 .menu-btn{display:none;align-items:center;gap:10px;height:36px;padding:0 12px;background:transparent;color:var(--fg);border:1px solid var(--rule);border-radius:2px;cursor:pointer;font-family:var(--display);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
 .menu-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
@@ -399,7 +393,7 @@ nav .sub-panel a[aria-current="page"],.mnav a[aria-current="page"],.mnav .mareas
 
 /* Sombras e bordas de passagem do mouse levemente esverdeadas, nos dois temas */
 :root{--card-shadow:0 22px 34px -20px rgba(36,73,60,.55)}
-@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){--card-shadow:0 0 0 1px rgba(143,196,174,.42),0 24px 40px -18px rgba(143,196,174,.36)} }
+
 :root[data-theme="dark"]{--card-shadow:0 0 0 1px rgba(143,196,174,.42),0 24px 40px -18px rgba(143,196,174,.36)}
 @media (hover:hover){ a.area:hover,a.area:focus-visible,.card:hover,.card:focus-visible,.rev:hover{border-color:var(--accent)} }
 
@@ -408,7 +402,7 @@ nav .sub-panel a[aria-current="page"],.mnav a[aria-current="page"],.mnav .mareas
 .faixa-alerta .wrap{padding:0}
 .faixa-alerta a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
 .faixa-alerta a:hover,.faixa-alerta a:focus-visible{text-decoration-thickness:2px}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .faixa-alerta{background:#8f1d14}}
+
 :root[data-theme="dark"] .faixa-alerta{background:#8f1d14}
 @media print{.faixa-alerta{display:none}}
 /* Celular: e-mails quebram a linha quando não cabem; links do rodapé e da faixa com área de toque maior (sem mudar a aparência) */
@@ -418,7 +412,7 @@ footer a,.faixa-alerta a{padding-block:6px}
 /* ===== Leitura confortável (08/11/2026) =====
    Mesma ideia do "Visual claro" do Sistema Godoy: cores do logo e da pasta (grafite #2a2627, prata #dad5d1, branco),
    verde só como detalhe, textos de apoio maiores e com cinza mais firme, caixa alta só nos rótulos pequenos
-   e informativos com prioridade na leitura. Continua seguindo o claro ou escuro do aparelho.
+   e informativos com prioridade na leitura. Desde 08/11/2026 (noite), o site é sempre claro: os blocos de tema escuro foram retirados.
    Este bloco fica no fim do arquivo e sobrepõe as regras anteriores; cores novas entram nas variáveis. */
 :root:where(.t-areas,.t-contato,.t-home,.t-informativos,.t-quem,.t-area,.t-erro,.t-informativo,.t-privacidade){
   --bg:#ffffff; --fg:#2a2627; --muted:#4d4748; --rule:#dad5d1; --rule-strong:#2a2627; --wm:#f4f2f0;
@@ -426,14 +420,7 @@ footer a,.faixa-alerta a{padding-block:6px}
   --principal:#2a2627; --principal-txt:#ffffff;
   --card-shadow:0 20px 32px -20px rgba(42,38,39,.45);
 }
-@media (prefers-color-scheme:dark){
-  :root:where(.t-areas,.t-contato,.t-home,.t-informativos,.t-quem,.t-area,.t-erro,.t-informativo,.t-privacidade):not([data-theme="light"]){
-    --bg:#2a2627; --fg:#ffffff; --muted:#dad5d1; --rule:#4a4445; --rule-strong:#dad5d1; --wm:#2f2b2c;
-    --btn-hover:#353031; --card-hover:#322e2f; --accent:#8fc4ae;
-    --principal:#dad5d1; --principal-txt:#2a2627;
-    --card-shadow:0 0 0 1px rgba(218,213,209,.35),0 24px 40px -18px rgba(0,0,0,.6);
-  }
-}
+
 :root:where(.t-areas,.t-contato,.t-home,.t-informativos,.t-quem,.t-area,.t-erro,.t-informativo,.t-privacidade)[data-theme="dark"]{
   --bg:#2a2627; --fg:#ffffff; --muted:#dad5d1; --rule:#4a4445; --rule-strong:#dad5d1; --wm:#2f2b2c;
   --btn-hover:#353031; --card-hover:#322e2f; --accent:#8fc4ae;
@@ -443,12 +430,12 @@ footer a,.faixa-alerta a{padding-block:6px}
 
 /* Verde só como detalhe: botão principal e atalho do WhatsApp nas cores do logo; bordas de passagem do mouse em grafite ou prata */
 .btn.primary,:root[data-theme="dark"] .btn.primary{background:var(--principal);border-color:var(--principal);color:var(--principal-txt)}
-@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .btn.primary{background:var(--principal);border-color:var(--principal);color:var(--principal-txt)} }
+
 @media (max-width:720px){
   :where(html.t-area,html.t-areas,html.t-contato,html.t-home,html.t-informativo,html.t-informativos,html.t-quem) .wa-fixo,
   :root:where(.t-area,.t-areas,.t-contato,.t-home,.t-informativo,.t-informativos,.t-quem)[data-theme="dark"] .wa-fixo{background:var(--principal);color:var(--principal-txt)}
 }
-@media (max-width:720px) and (prefers-color-scheme:dark){ :root:where(.t-area,.t-areas,.t-contato,.t-home,.t-informativo,.t-informativos,.t-quem):not([data-theme="light"]) .wa-fixo{background:var(--principal);color:var(--principal-txt)} }
+
 @media (hover:hover){ a.area:hover,a.area:focus-visible,.card:hover,.card:focus-visible,.rev:hover,html:where(.t-areas) a.area:hover,html:where(.t-areas) a.area:focus-visible{border-color:var(--rule-strong)} html:where(.t-areas) a.area:hover h3,html:where(.t-areas) a.area:focus-visible h3{color:inherit} }
 :where(html.t-informativos) .card .link,:where(html.t-informativos) .card .link:hover,:where(html.t-contato) .contact .link,:where(html.t-contato) .contact .link:hover{color:var(--fg);border-bottom-color:var(--accent)}
 .link{border-bottom-color:var(--accent)}
@@ -510,5 +497,8 @@ h1,h2,h3{font-weight:400}
 /* Rótulos pequenos em caixa alta mais legíveis, sobretudo no escuro: letra um pouco maior e mais firme; verde mais claro no escuro */
 .eyebrow,:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .meta{font-size:14px;font-weight:500}
 .contact .label,.bloco .sub{font-weight:600}
-@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){--accent:#a6d6c1} }
+
 :root[data-theme="dark"]{--accent:#a6d6c1}
+
+/* Site sempre claro (08/11/2026) */
+:root{color-scheme:light}
