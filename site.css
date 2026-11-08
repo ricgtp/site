@@ -506,3 +506,9 @@ h1,h2,h3{font-weight:400}
   :where(html.t-informativo) .art p,:where(html.t-informativo) .art li{font-size:17px;line-height:1.7}
   :where(html.t-informativo) .art .lead{font-size:18.5px}
 }
+
+/* Rótulos pequenos em caixa alta mais legíveis, sobretudo no escuro: letra um pouco maior e mais firme; verde mais claro no escuro */
+.eyebrow,:where(html.t-area,html.t-erro,html.t-informativo,html.t-informativos,html.t-privacidade) .meta{font-size:14px;font-weight:500}
+.contact .label,.bloco .sub{font-weight:600}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){--accent:#a6d6c1} }
+:root[data-theme="dark"]{--accent:#a6d6c1}
